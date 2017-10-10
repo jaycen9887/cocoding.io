@@ -1,9 +1,10 @@
 import React from "react";
 
 const LandingPage = () =>
+<div>
     <div id="index-banner" className="parallax-container">
         <div className="section no-pad-bot">
-            <!--<div className="container">-->
+            {/* <div className="container"> */}
             <div id="signUpAndTagDiv">
 
                 <div className="row">
@@ -28,12 +29,11 @@ const LandingPage = () =>
                     </div>
 
                     <div className="col s6">
-                        <p id="tagLine"><strong>All the <u>tools</u><br> you need
-                            to code<br> on one website</strong></p>
-                        <p id="tagLine2">cocoding offers free file sharing,<br> choose from over 100 languages.<br> Learn to code and be able to access<br>the tools needed for development anywhere, <br>anytime with no installations required.  <br> </p>
+                        <p id="tagLine"><strong>All the <u>tools</u><br/> you need
+                            to code<br/> on one website</strong></p>
+                        <p id="tagLine2">cocoding offers free file sharing,<br/> choose from over 100 languages.<br/> Learn to code and be able to access<br/>the tools needed for development anywhere, <br/>anytime with no installations required.  <br/> </p>
 
                     </div>
-
                 </div>
             </div>
         </div>
@@ -45,12 +45,12 @@ const LandingPage = () =>
     <div className="container ">
         <div className="section ">
 
-            <!--   Icon Section   -->
+           {/*  Icon Section */} 
             <div className="row" id="howWorksTitle">How cocoding Works</div>
             <div className="row ">
                 <div className="col s12 m4">
                     <div className="icon-block">
-                        <!--<h2 className="center brown-text"><i className="material-icons">flash_on</i></h2>-->
+                        {/* <h2 className="center brown-text"><i className="material-icons">flash_on</i></h2> */}
                         <h5 className="center">Sign up and share your screen with others</h5>
 
                     </div>
@@ -64,7 +64,7 @@ const LandingPage = () =>
 
                 <div className="col s12 m4">
                     <div className="icon-block">
-                        <!--<h2 className="center brown-text"><i className="material-icons">settings</i></h2>-->
+                        {/* <h2 className="center brown-text"><i className="material-icons">settings</i></h2> */}
                         <h5 className="center">just save your files to the cocoding cloud.</h5>
 
                     </div>
@@ -131,13 +131,13 @@ const LandingPage = () =>
                 {/*add video here*/}
                 <div className="col s12"id="div3Info"></div>
                 <div className="col s12"id="div3Info"></div>
-                <!--<div className="col s12"id="div3Info"><h4>Start Learning to Code Today</h4></div>-->
+                {/* <div className="col s12"id="div3Info"><h4>Start Learning to Code Today</h4></div> */}
                 <div className="row" id="howWorksTitle">Start Learning to Code Today</div>
-                <h5 className="header col s12 light"><a className="btn modal-trigger pulse" data-target="signUpModal" href="#signUpModal">Start                       Now</a></h5>
+                <h5 className="header col s12 light"><a className="btn modal-trigger pulse" data-target="signUpModal" href="#signUpModal">Start Now</a></h5>
             </div>
         </div>
     </div>
 </div>
-
+</div>
 
 export default LandingPage;
