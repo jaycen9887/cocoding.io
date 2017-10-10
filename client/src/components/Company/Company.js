@@ -1,9 +1,9 @@
 import React from "react";
 
 const Company = () =>
+<div>
     <div id="index-banner" className="parallax-container">
         <div className="section no-pad-bot">
-            <!--<div className="container">-->
             <div id="signUpAndTagDiv">
 
                 <div className="row">
@@ -68,7 +68,7 @@ const Company = () =>
 
         </div>
     </div>
-    <!--<div className="parallax"><img src="img/rotbotbg.png" id="robotBg" alt="Unsplashed background img 3"></div>-->
+    </div>
 </div>
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 
 const Room = () =>
+<div>
     <div id="index-banner" className="parallax-container">
         <div className="section no-pad-bot">
             <div id="spaceDiv2"></div>
@@ -10,7 +11,7 @@ const Room = () =>
                     <div className="row"></div>
 
                     <h5 className="black-text center" id="howWorksTitle">Create a classNameroom here</h5>
-                    <hr>
+                    <hr/>
                         <div className="row"></div>
                 </div>
                 <div className="row">
@@ -42,7 +43,7 @@ const Room = () =>
                                 <a href="/deleteroom/{{id}}">DELETE {{id}}</a>
                             </div>
                             {{/each}}
-                            <!--<a href="#">This is a link</a>-->
+                            {/* <!--<a href="#">This is a link</a>--> */}
                         </div>
                     </div>
                     <div className="col s3"></div>
@@ -55,5 +56,5 @@ const Room = () =>
         <div id="spaceDiv"></div>
         <div className="parallax"><img src="img/roomimage4.png" alt="Unsplashed background img 1"/></div>
     </div>
-
+</div>
 export default Room;

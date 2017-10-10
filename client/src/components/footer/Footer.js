@@ -12,17 +12,10 @@ const Footer = () =>
                     <ul>
                         <li><a className="white-text" href="https://github.com/jaycen9887">Jacyen Milling</a></li>
                         <li><a className="white-text" href="https://github.com/mekaknepley">Meka Knepley</a></li>
-                        <!--<li><a className="white-text" href="#!">Link 4</a></li>-->
                     </ul>
                 </div>
                 <div className="col l3 s12">
                     <h5 className="white-text">Contact Us</h5>
-                    <!--<ul>-->
-                    <!--<li><a className="white-text" href="#!">Link 1</a></li>-->
-                    <!--<li><a className="white-text" href="#!">Link 2</a></li>-->
-                    <!--<li><a className="white-text" href="#!">Link 3</a></li>-->
-                    <!--<li><a className="white-text" href="#!">Link 4</a></li>-->
-                    <!--</ul>-->
                 </div>
             </div>
         </div>
