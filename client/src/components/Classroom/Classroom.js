@@ -1,9 +1,9 @@
 import React from "react";
 
 const Classroom = () =>
+<div>
     <div id="index-banner" className="parallax-container">
         <div className="section no-pad-bot">
-            <!--<div className="container">-->
             <div id="signUpAndTagDiv">
 
                 <div className="row">
@@ -70,12 +70,12 @@ const Classroom = () =>
 
         </div>
     </div>
-    <!--<div className="parallax"><img src="img/rotbotbg.png" id="robotBg" alt="Unsplashed background img 3"/></div>-->
+{/*     <!--<div className="parallax"><img src="img/rotbotbg.png" id="robotBg" alt="Unsplashed background img 3"/></div>--> */}
 </div>
 
 <div id="index-banner" className="parallax-container">
     <div className="section no-pad-bot">
-        <!--<div className="container">-->
+       {/*  <!--<div className="container">--> */}
         <div id="signUpAndTagDiv">
 
             <div className="row">
@@ -95,5 +95,6 @@ const Classroom = () =>
     </div>
 
     <div className="parallax"><img src="img/companiesimage.png" alt="Unsplashed background img 1"/></div>
+</div>
 </div>
 export default Classroom;
