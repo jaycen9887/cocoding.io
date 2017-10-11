@@ -28,9 +28,9 @@ const LandingPage = () =>
                     </div>
 
                     <div className="col s6">
-                        <p id="tagLine"><strong>All the <u>tools</u><br> you need
-                            to code<br> on one website</strong></p>
-                        <p id="tagLine2">cocoding offers free file sharing,<br> choose from over 100 languages.<br> Learn to code and be able to access<br>the tools needed for development anywhere, <br>anytime with no installations required.  <br> </p>
+                        <p id="tagLine"><strong>All the <u>tools</u><br/> you need
+                            to code<br/> on one website</strong></p>
+                        <p id="tagLine2">cocoding offers free file sharing,<br/> choose from over 100 languages.<br/> Learn to code and be able to access<br/>the tools needed for development anywhere, <br/>anytime with no installations required.  <br/> </p>
 
                     </div>
 
