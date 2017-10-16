@@ -1,6 +1,6 @@
 import React from "react";
 
-const Nav = () =>
+const Nav = () => (
     <nav className="blue-grey darken-4">
         <div className="nav-wrapper">
             <div id="navPosition">
@@ -14,5 +14,6 @@ const Nav = () =>
             </div>
         </div>
     </nav>
+);
 
 export default Nav;

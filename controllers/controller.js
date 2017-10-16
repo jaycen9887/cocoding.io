@@ -4,7 +4,7 @@ module.exports = function(app, passport, opentok) {
     var router = express.Router();
 
     var mysql = require('mysql');
-    var dbconfig = require('../config/database');
+    var dbconfig = require('../config/dbconfig');
     var connection;
     var firebase = require('firebase');
 

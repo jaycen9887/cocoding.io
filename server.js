@@ -14,9 +14,9 @@ var app = express();
 var http = require("http").Server(app);
 var io = require("socket.io")(http);
 
-require('./config/passport')(passport);
+require('./controllers/passport')(passport);
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3001;
 
 // DEBUG Create a global opentok session and store it in the express app
 // When rooms are stored in the database, the session id will get stored there
