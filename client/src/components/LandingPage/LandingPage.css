@@ -1,0 +1,10 @@
+#layingimageDiv {
+    background-image: url("/img/layingimage.png");
+    height: 680px;
+    margin-top: -15px;
+}
+
+#signUpBoxMainPage {
+    margin-top: 40px;
+    margin-left: 30px;
+}

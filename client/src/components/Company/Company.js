@@ -24,7 +24,7 @@ const Company = () =>
             </div>
         </div>
 
-        <div className="parallax"><img src="img/companiesimage3.png" alt="Unsplashed background img 1"/></div>
+        {/*<div className="parallax"><img src="img/companiesimage3.png" alt="Unsplashed background img 1"/></div>*/}
     </div>
 
 <div className="parallax-container valign-wrapper grey lighten-3 z-depth-3">
@@ -72,6 +72,7 @@ const Company = () =>
     </div>
     </div>
 </div>
+
 
 
 export default Company;

@@ -1,4 +1,5 @@
 import React from "react";
+import "./SignUpModal.css"
 
 const SignUpModal = () =>
     <div id="signUpModal" className="modal modal-fixed-footer center authModal blue">

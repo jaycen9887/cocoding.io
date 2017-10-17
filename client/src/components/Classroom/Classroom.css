@@ -1,6 +1,10 @@
 #signUpAndTagDiv {
     background-image: url("/img/classroomstopimage-1.png");
+    height: 550px;
+    margin-top: -15px;
 }
 #signUpAndTagDiv2 {
     background-image: url("/img/companiesimage.png");
+    height: 600px;
+    margin-bottom: -15px;
 }

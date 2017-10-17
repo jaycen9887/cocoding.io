@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Parallax} from 'react-materialize';
+import "./LandingPage.css"
 
 class LandingPage extends Component {
 
@@ -9,7 +10,7 @@ class LandingPage extends Component {
 
                 <div className="section no-pad-bot">
                     {/* <div className="container"> */}
-                    <div id="signUpAndTagDiv">
+                    <div id="layingimageDiv">
 
                         <div className="row">
                             <div className="col s6">
@@ -50,7 +51,7 @@ class LandingPage extends Component {
                     </div>
                 </div>
 
-                <Parallax imageSrc="img/layingimage.png" />
+                {/*<Parallax imageSrc="img/layingimage.png" />*/}
 
                 <div className="blue-grey lighten-4">
                     <div className="container ">
@@ -114,7 +115,6 @@ class LandingPage extends Component {
 
 
                 <Parallax imageSrc="img/codebg.png"/>
-
                 <div className="langBox blue-grey darken-4">
                     <div className="container ">
                         <div className="section">
@@ -134,9 +134,15 @@ class LandingPage extends Component {
                 <div className="parallax-container valign-wrapper blue-grey lighten-3">
                     <div className="section no-pad-bot">
                         <div className="container">
+                            <div className="col s12" id="div3Info"></div>
+
                             <div className="row center">
                                 {/*add video here*/}
-                                <div className="col s12" id="div3Info"></div>
+                                <div class = "video-container" >
+                                    <iframe width = "540" height = "500"
+                                            src = "https://www.youtube.com/embed/Q8TXgCzxEnw?rel=0"
+                                            frameborder = "0" allowfullscreen ></iframe>
+                                </div>
                                 <div className="col s12" id="div3Info"></div>
                                 {/* <div className="col s12"id="div3Info"><h4>Start Learning to Code Today</h4></div> */}
                                 <div className="row" id="howWorksTitle">Start Learning to Code Today</div>
