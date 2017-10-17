@@ -53,7 +53,7 @@ class LandingPage extends Component {
 
                 {/*<Parallax imageSrc="img/layingimage.png" />*/}
 
-                <div className="blue-grey lighten-4">
+                <div className=" white">
                     <div className="container ">
                         <div className="section ">
 
@@ -113,9 +113,9 @@ class LandingPage extends Component {
                     </div>
                 </div>
 
-
+                {/*<div id="codebgDiv">*/}
                 <Parallax imageSrc="img/codebg.png"/>
-                <div className="langBox blue-grey darken-4">
+                <div className="langBox teal darken-1">
                     <div className="container ">
                         <div className="section">
                             <div className="row ">
@@ -131,7 +131,8 @@ class LandingPage extends Component {
                     </div>
                 </div>
 
-                <div className="parallax-container valign-wrapper blue-grey lighten-3">
+
+                <div className="parallax-container valign-wrapper white">
                     <div className="section no-pad-bot">
                         <div className="container">
                             <div className="col s12" id="div3Info"></div>
@@ -145,7 +146,7 @@ class LandingPage extends Component {
                                 </div>
                                 <div className="col s12" id="div3Info"></div>
                                 {/* <div className="col s12"id="div3Info"><h4>Start Learning to Code Today</h4></div> */}
-                                <div className="row" id="howWorksTitle">Start Learning to Code Today</div>
+                                <div className="row" id="howWorksTitle">Start coCoding Today</div>
                                 <h5 className="header col s12 light"><a className="btn modal-trigger pulse"
                                                                         data-target="signUpModal" href="#signUpModal">Start
                                     Now</a></h5>

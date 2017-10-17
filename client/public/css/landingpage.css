@@ -70,11 +70,12 @@ nav .brand-logo {
   text-align: center;
   font-size: 40px;
   font-family: 'Fjalla One', sans-serif;
-  color: #000;
+  color: black;
 }
 
 p {
   line-height: 2rem;
+
 }
 
 .button-collapse {

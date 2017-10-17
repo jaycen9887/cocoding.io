@@ -29,13 +29,14 @@ class Classroom extends Component {
 {/*<Parallax imageSrc="img/rotbotbg.png" />*/}
     {/*     <!--<div className="parallax"><img src="img/rotbotbg.png" id="robotBg" alt="Unsplashed background img 3"/></div>--> */}
 
-    <div className="section no-pad-bot">
+    <div className="section no-pad-bot white">
         <div className="container">
+            <div className="row" id="howWorksTitle"></div>
             <div className="row" id="howWorksTitle">Why learn with cocoding?</div>
             <div className="row" id="howWorksTitle"></div>
-            <div className="row" id="howWorksTitle"></div>
-            <div className="row" id="howWorksTitle"></div>
-            <div className="row" id="howWorksTitle"></div>
+
+
+
             <div className="row">
                 <div className="col s4 center">
                     <i className="small material-icons black" id="icons">apps</i>
@@ -67,8 +68,10 @@ class Classroom extends Component {
                 <div className="col s4 center">
                     <i className="small material-icons black">apps</i>
                     <h5 className="text-black">Endless languages</h5>
-                    <p className="black-text">Choose from over a hundred languages and be able to pick the language that is right from                       you.</p>
+                    <p className="black-text">Choose from over a hundred languages and be able to pick the language that                        is right from you.</p>
                 </div>
+                <div className="row" id="howWorksTitle"></div>
+                <div className="row" id="howWorksTitle"></div>
             </div>
 
         </div>
