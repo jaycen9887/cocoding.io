@@ -47,7 +47,7 @@ module.exports = function(app, passport, opentok) {
         {
             res.redirect("/room");7
         } else {
-            res.render("landingpage");
+            res.render("LandingPage");
         }
     });
 
@@ -95,7 +95,7 @@ module.exports = function(app, passport, opentok) {
     });
 
     router.get('/login', function (req, res) {
-        res.render("landingpage");
+        res.render("LandingPage");
     });
 
     router.get('/logout', function (req, res) {
@@ -104,7 +104,7 @@ module.exports = function(app, passport, opentok) {
     });
 
     router.get('/signup', function (req, res) {
-        res.render("landingpage");
+        res.render("LandingPage");
     });
 
     router.get("/codeEditor", function(req,res){
