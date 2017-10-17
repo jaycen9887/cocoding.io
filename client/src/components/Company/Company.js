@@ -1,10 +1,12 @@
 import React from "react";
 
+import "./Company.css"
+
 const Company = () =>
 <div>
     <div id="index-banner" className="parallax-container">
         <div className="section no-pad-bot">
-            <div id="signUpAndTagDiv">
+            <div id="companiesDiv1">
 
                 <div className="row">
                     <div className="row" id="howWorksTitle"></div>

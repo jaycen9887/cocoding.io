@@ -1,8 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
+import {Parallax} from 'react-materialize';
+import "./Classroom.css"
 
-const Classroom = () =>
+class Classroom extends Component {
+    render() {
+        return (
 <div>
-    <div id="index-banner" className="parallax-container">
+
         <div className="section no-pad-bot">
             <div id="signUpAndTagDiv">
 
@@ -22,10 +26,9 @@ const Classroom = () =>
             </div>
         </div>
 
-        <div className="parallax"><img src="img/classNameroomstopimage-1.png" alt="Unsplashed background img 1"/></div>
-    </div>
+{/*<Parallax imageSrc="img/rotbotbg.png" />*/}
+    {/*     <!--<div className="parallax"><img src="img/rotbotbg.png" id="robotBg" alt="Unsplashed background img 3"/></div>--> */}
 
-<div className="parallax-container valign-wrapper grey lighten-3 z-depth-3">
     <div className="section no-pad-bot">
         <div className="container">
             <div className="row" id="howWorksTitle">Why learn with cocoding?</div>
@@ -70,13 +73,12 @@ const Classroom = () =>
 
         </div>
     </div>
-{/*     <!--<div className="parallax"><img src="img/rotbotbg.png" id="robotBg" alt="Unsplashed background img 3"/></div>--> */}
-</div>
+    {/*<Parallax imageSrc="img/companiesimage.png" />*/}
+    {/*<div className="parallax"><img src="img/companiesimage.png" alt="Unsplashed background img 1"/></div>*/}
 
-<div id="index-banner" className="parallax-container">
     <div className="section no-pad-bot">
        {/*  <!--<div className="container">--> */}
-        <div id="signUpAndTagDiv">
+        <div id="signUpAndTagDiv2">
 
             <div className="row">
                 <div className="row" id="howWorksTitle"></div>
@@ -94,7 +96,9 @@ const Classroom = () =>
         </div>
     </div>
 
-    <div className="parallax"><img src="img/companiesimage.png" alt="Unsplashed background img 1"/></div>
 </div>
-</div>
+        );
+    }
+}
+
 export default Classroom;
