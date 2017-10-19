@@ -1,8 +1,36 @@
 import React, { Component } from "react";
 import {Parallax} from 'react-materialize';
 import "./LandingPage.css"
+import axios from "axios";
 
-class LandingPage extends Component {
+class LandingPage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {signUpUserName: '', signUpPassword: ''};
+
+        this.handleUserNameChange = this.handleUserNameChange.bind(this);
+        this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    }
+
+    handleUserNameChange(event) { this.setState({signUpUserName: event.target.value}); }
+    handlePasswordChange(event) { this.setState({signUpPassword: event.target.value}); }
+
+    handleSignUpClick = () => {
+        //console.log('this is:', this);
+        axios.post('/login', {
+            params: {
+                username: this.state.signUpUserName,
+                password: this.state.signUpPassword
+            }
+        })
+        .then(function(response) {
+            //console.log(response);
+            window.location.href = "/room";
+        })
+        .catch(function(error) {
+            console.log( "Login Fail" );
+        });
+    }
 
     render() {
         return (
@@ -17,12 +45,12 @@ class LandingPage extends Component {
                                 <div id="signUpBoxMainPage">
                                     <div className="content">
                                         <div className="title">Coder Sign Up</div>
-                                        <input id="signUpUsernameMainPage" type="text" placeholder="Coder Name"/>
-                                        <input id="signUpPasswordMainPage" type="password" placeholder="Password"/>
+                                        <input onChange={this.handleUserNameChange} id="signUpUsernameMainPage" type="text" placeholder="Coder Name"/>
+                                        <input onChange={this.handlePasswordChange} id="signUpPasswordMainPage" type="password" placeholder="Password"/>
                                         <input type="checkbox" id="rememberMe"/>
                                         <label for="rememberMe"></label><span>I have read and agree to the <a
                                         href="#">Terms of Use </a>and <a href="#">Privacy Policy</a></span>
-                                        <button id="signUpSubmitMainPage">Create Account</button>
+                                        <button id="signUpSubmitMainPage" onClick={this.handleSignUpClick}>Create Account</button>
                                         <div className="social"><span>or sign up with social media</span></div>
                                         <div className="buttons">
                                             <button className="facebook"><i className="fa fa-facebook"></i>Facebook
@@ -62,13 +90,13 @@ class LandingPage extends Component {
                             <div className="row ">
                                 <div className="col s12 m4">
                                     <div className="icon-block">
-                                        {/* <h2 className="center brown-text"><i className="material-icons">flash_on</i></h2> */}
+                                        {/* <h2 className="center brown-text"><i            className="material-icons">flash_on</i></h2> */}
                                         <h5 className="center">Sign up and share your screen with others</h5>
 
                                     </div>
                                 </div>
 
-                                <div className="col s12 m4">
+                                <div className="col s12 m4 ">
                                     <div className="icon-block">
                                         <h5 className="center">Code in over 100 languages without downloading
                                             plugins</h5>
@@ -115,7 +143,7 @@ class LandingPage extends Component {
 
                 {/*<div id="codebgDiv">*/}
                 <Parallax imageSrc="img/codebg.png"/>
-                <div className="langBox teal darken-1">
+                <div className="langBox blue-grey darken-4">
                     <div className="container ">
                         <div className="section">
                             <div className="row ">

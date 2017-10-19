@@ -111,14 +111,20 @@ module.exports = function(app, passport, opentok) {
         res.render("codeEditor");
     });
 
+    router.get("/roomlist" ,function(req,res){
+        var roomQuery = "SELECT * FROM " + dbconfig.rooms_table;
+        connection.query(roomQuery,  function(err, rows) {
+            res.json(rows);
+            console.log(rows);
+        });
+    });
+
     router.get("/room", isLoggedIn, function(req,res){
         // No room specified, list all rooms
 
         var roomQuery = "SELECT * FROM " + dbconfig.rooms_table;
         connection.query(roomQuery,  function(err, rows) {
-            res.render("roomlist", {
-                username: req.user.username,
-                rooms: rows})
+            return rows
         });
     });
 
@@ -169,7 +175,8 @@ module.exports = function(app, passport, opentok) {
                 console.log("created room " + rows.insertId);
                 var roomId = rows.insertId;
                 room = roomId;
-                res.redirect('/terminal/'+roomId);
+                res.json({ roomId: roomId });
+                // res.redirect('/terminal/'+roomId);
             });
         });
         /********** FIREBASE *********/

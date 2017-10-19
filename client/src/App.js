@@ -5,7 +5,9 @@ import Nav from "./components/Nav";
 import LandingPage from "./components/LandingPage";
 import Company from "./components/Company";
 import Classroom from "./components/Classroom";
+import Room from "./components/Room";
 import Footer from "./components/Footer"
+import Terminal from "./components/Terminal"
 
 const App = () =>
     <Router>
@@ -15,6 +17,8 @@ const App = () =>
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/companies" component={Company} />
                 <Route exact path="/classrooms" component={Classroom} />
+                <Route exact path="/room" component={Room} />
+                <Route exact path="/terminal" component={Terminal} />
             </Switch>
             <Footer />
         </div>
