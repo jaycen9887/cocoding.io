@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import {Button, Modal, Icon} from 'react-materialize';
 import "./Terminal.css";
+import axios from "axios";
+
 
 class Terminal extends React.Component {
     render() {

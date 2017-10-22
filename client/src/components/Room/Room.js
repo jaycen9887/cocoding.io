@@ -40,7 +40,7 @@ class Room extends React.Component {
         render() {
             return(
                 <div>
-                    <div className="section no-pad-bot">
+                    <div className="section no-pad-bot teal lighten-1">
                         <div id="spaceDiv2"></div>
                         <div className="row" id="texture">
                             <div className="col s12">
@@ -66,7 +66,7 @@ class Room extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="col s3 m3">
+                                <div className="col s3 m3 ">
                                     <div className="card  white center">
                                         <div className="card-content black-text center hoverable z-depth-4">
                                             <i className="large material-icons white" id="icons">supervisor_account</i>
@@ -94,7 +94,7 @@ class Room extends React.Component {
 
                         </div>
                     </div>
-                    <div id="spaceDiv"></div>
+                    <div className="teal lighten-1" id="spaceDiv"></div>
 
                 </div>
             )}

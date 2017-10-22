@@ -81,7 +81,7 @@ class LandingPage extends React.Component {
 
                 {/*<Parallax imageSrc="img/layingimage.png" />*/}
 
-                <div className=" white">
+                <div className="z-depth-4 white">
                     <div className="container ">
                         <div className="section ">
 
@@ -142,7 +142,119 @@ class LandingPage extends React.Component {
                 </div>
 
                 {/*<div id="codebgDiv">*/}
+
+                <div className="parallax-container valign-wrapper blue-grey lighten-2">
+                    <div className="section no-pad-bot">
+                        <div className="container">
+                            <div className="row center">
+                                <h1 id="howWorksTitle">Cool Features</h1>
+                            </div>
+                            {/*<!--<div className="row center">-->*/}
+                            {/*<!--<h5 className="header col s12 light"></h5>-->*/}
+                            {/*<!--</div>-->*/}
+                            <div className="row center">
+                                <div className="col s4">
+                                    <div className="row ">
+                                        <div className="col m12 m7 ">
+                                            <div className="card z-depth-3 hoverable">
+                                                <div className="card-image">
+                                                    <img src="img/step3image.png"/>
+
+                                                </div>
+                                                <div className="card-content blue">
+                                                    <h4>coCode</h4>
+                                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                                        I am convenient because I require little markup to use effectively.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div></div>
+                                <div className="col s4"> <div className="row">
+                                    <div className="col m12 m7">
+                                        <div className="card z-depth-3 hoverable">
+                                            <div className="card-image">
+                                                <img src="img/step3image.png"/>
+
+                                            </div>
+                                            <div className="card-content blue">
+                                                <h4>Themes</h4>
+                                                <p>I am a very simple card. I am good at containing small bits of information.
+                                                    I am convenient because I require little markup to use effectively.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div></div>
+                                <div className="col s4"> <div className="row">
+                                    <div className="col m12 m7">
+                                        <div className="card z-depth-3 hoverable">
+                                            <div className="card-image">
+                                                <img src="img/step3image.png"/>
+
+                                            </div>
+                                            <div className="card-content blue">
+                                                <h4>Chat</h4>
+                                                <p>I am a very simple card. I am good at containing small bits of information.
+                                                    I am convenient because I require little markup to use effectively.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div></div>
+                            </div>
+                            <div className="row center">
+                                <div className="col s4"> <div className="row">
+                                    <div className="col m12 m7">
+                                        <div className="card z-depth-3 hoverable">
+                                            <div className="card-image">
+                                                <img src="img/step3image.png"/>
+
+                                            </div>
+                                            <div className="card-content blue">
+                                                <h4>Video Chat</h4>
+                                                <p>I am a very simple card. I am good at containing small bits of information.
+                                                    I am convenient because I require little markup to use effectively.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div></div>
+                                <div className="col s4"> <div className="row">
+                                    <div className="col m12 m7">
+                                        <div className="card z-depth-3 hoverable">
+                                            <div className="card-image">
+                                                <img src="img/step3image.png"/>
+
+                                            </div>
+                                            <div className="card-content blue">
+                                                <h4>Database</h4>
+                                                <p>I am a very simple card. I am good at containing small bits of information.
+                                                    I am convenient because I require little markup to use effectively.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div></div>
+                                <div className="col s4"> <div className="row">
+                                    <div className="col m12 m7">
+                                        <div className="card z-depth-3 hoverable">
+                                            <div className="card-image">
+                                                <img src="img/step3image.png"/>
+
+                                            </div>
+                                            <div className="card-content blue">
+                                                <h4>Push to Git</h4>
+                                                <p>I am a very simple card. I am good at containing small bits of information.
+                                                    I am convenient because I require little markup to use effectively.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div></div>
+                            </div>
+                        </div>
+                    </div>
+                    {/*<div className="parallax blue-grey darken-2"><img src="img/codebg.png" alt="Unsplashed background img 2"/>*/}
+                    {/*</div>*/}
+                </div>
+
                 <Parallax imageSrc="img/codebg.png"/>
+
                 <div className="langBox blue-grey darken-4">
                     <div className="container ">
                         <div className="section">
