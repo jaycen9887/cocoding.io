@@ -178,23 +178,119 @@ footer.page-footer {
   max-height: 105% !important;
 }
 
-/*#preview-form {*/
-/*width: 1380px;*/
-/*!*height: 1000px;*!*/
-/*}*/
+#preview-form {
+  /*flex: 0 0 auto;*/
+  /*min-height: 200px;*/
+  /*min-width: 1000px;*/
+  /*height:400px;*/
+  /*width: 1390px;*/
+}
 
 /*#editor-value {*/
 /*height: 1000px;*/
 /*}*/
 
 .CodeMirror {
-  height:628px;
-  width: 1390px;
+  height: auto;
+  overflow: hidden;
+  /*flex: 0 0 auto;*/
+  /*!*min-height: 200px;*!*/
+  /*min-width: 1000px;*/
+  /*height:400px;*/
+  /*width: 1390px;*/
 }
-/*.CoddeMirror-gutters {*/
+.CodeMirror-scroll {
+  height: auto;
+}
+/*.CodeMirror-gutters {*/
 /*min-height: 400px;*/
 /*}*/
 
 /*#terminalBody {*/
-/*height: 500px;*/
+/*flex: 0 0 auto;*/
+/*min-height: 200px;*/
+/*min-width: 1000px;*/
+/*height:400px;*/
+/*width: 1390px;*/
 /*}*/
+
+.panel-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid silver;
+  overflow: hidden;
+  height: 100vh;
+
+  /* avoid browser level touch actions */
+  xtouch-action: none;
+}
+
+.panel-left {
+  flex: 0 0 auto;
+  /* only manually resize */
+  padding: 10px;
+  width: 200px;
+  min-height: 200px;
+  min-width: 100px;
+  white-space: nowrap;
+  background: #111111;
+  color: white;
+}
+
+.splitter {
+  flex: 0 0 auto;
+  width: 18px;
+  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
+  min-height: 500px;
+  cursor: col-resize;
+}
+
+.panel-right {
+  flex: 1 1 auto;
+  /* resizable */
+  /*padding: 10px;*/
+  /*width: 100%;*/
+  /*min-height: 200px;*/
+  /*min-width: 200px;*/
+  /*background: #eee;*/
+  height: 100vw;
+}
+
+.panel-container-vertical {
+  display: flex;
+  flex-direction: column;
+  /*!*height: 500px;*!*/
+  /*border: 1px solid silver;*/
+  overflow: hidden;
+  background-color: black;
+  height: 100vh;
+}
+
+.panel-top {
+  flex: 0 0 auto;
+  /* only manually resize */
+  /*padding: 10px;*/
+  height: 400px;
+  min-height: 100px;
+  /*width: 100%;*/
+  /*white-space: nowrap;*/
+  /*background: #838383;*/
+  /*color: white;*/
+  overflow: hidden;
+}
+
+.splitter-horizontal {
+  flex: 0 0 auto;
+  height: 18px;
+  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/hsizegrip.png) center center no-repeat #535353;
+  cursor: row-resize;
+}
+
+.panel-bottom {
+  flex: 1 1 auto;
+  /* resizable */
+  padding: 10px;
+  min-height: 150px;
+  background: #111111;
+}
+
