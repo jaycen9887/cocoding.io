@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tokbox = () =>
+const Tokbox = () => {}
 
 
 export default Tokbox;

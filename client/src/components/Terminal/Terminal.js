@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Button, Modal, Icon} from 'react-materialize';
 import "./Terminal.css";
 import axios from "axios";
+import Editor from "./editor"; 
 
 
 class Terminal extends React.Component {
@@ -34,11 +35,17 @@ class Terminal extends React.Component {
                                             <li><a href="#" id="isSignDiv"></a></li>
                                         </ul>
                                 </nav>
-                                <form id="preview-form">
+
+                                <Editor 
+                                    className="codemirror-textarea"
+                                    theme={"rubyblue"}
+                                    readOnly={false}
+                                />
+                                 {/* <form id="preview-form">
                                     <textarea className="codemirror-textarea" name="editor-value" id="editor-value" rows="4" cols="10">&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;</textarea>
                                     <br/>
-                                    {/*<!--<input type="submit" name="submit" id="submit" value="submit">-->*/}
-                                </form>
+                                    
+                                </form>  */}
                             </div>
                         </div>
 
