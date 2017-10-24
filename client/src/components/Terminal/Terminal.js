@@ -109,6 +109,10 @@ class Terminal extends React.Component {
         };
     }
 
+    componentDidMount() {
+        window.addEventListener('resize', this._handleWindowResize);
+    }
+
     handleChange = tree => {
         this.setState({
             tree: tree

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import {Parallax} from 'react-materialize';
 import "./LandingPage.css"
 import axios from "axios";
+import Footer from "../Footer"
+
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -294,9 +296,12 @@ class LandingPage extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
+
         );
     }
+
 }
 
 export default LandingPage;
