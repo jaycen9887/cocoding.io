@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Footer from "../Footer"
 
 class Room extends React.Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class Room extends React.Component {
 
     componentDidMount() {
         this.loadRooms();
+
     }
 
     handleCreateRoomClick(e) {

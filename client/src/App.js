@@ -20,7 +20,7 @@ const App = () =>
                 <Route exact path="/room" component={Room} />
                 <Route exact path="/terminal" component={Terminal} />
             </Switch>
-            <Footer />
+            {/*<Footer />*/}
         </div>
     </Router>;
 
