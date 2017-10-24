@@ -70,7 +70,7 @@ class LandingPage extends React.Component {
                             <div className="col s6">
                                 <p id="tagLine"><strong>All the <u>tools</u><br/> you need
                                     to code<br/> on one website</strong></p>
-                                <p id="tagLine2">cocoding offers free file sharing,<br/> choose from over 100
+                                <p id="tagLine2">coCoding offers free file sharing,<br/> choose from over 100
                                     languages.<br/> Learn to code and be able to access<br/>the tools needed for
                                     development anywhere, <br/>anytime with no installations required. <br/></p>
 
@@ -86,7 +86,7 @@ class LandingPage extends React.Component {
                         <div className="section ">
 
                             {/*  Icon Section */}
-                            <div className="row" id="howWorksTitle">How cocoding Works</div>
+                            <div className="row" id="howWorksTitle">How coCoding Works</div>
                             <div className="row ">
                                 <div className="col s12 m4">
                                     <div className="icon-block">
@@ -106,7 +106,7 @@ class LandingPage extends React.Component {
                                 <div className="col s12 m4">
                                     <div className="icon-block">
                                         {/* <h2 className="center brown-text"><i className="material-icons">settings</i></h2> */}
-                                        <h5 className="center">just save your files to the cocoding cloud.</h5>
+                                        <h5 className="center">just save your files to the coCoding cloud.</h5>
 
                                     </div>
                                 </div>
@@ -261,7 +261,7 @@ class LandingPage extends React.Component {
                             <div className="row ">
                                 <div className="col s12 center">
                                     <h3><i className="mdi-content-send brown-text"></i></h3>
-                                    <h4>cocoding offers over 100 different coding languages</h4>
+                                    <h4>coCoding offers over 100 different coding languages</h4>
                                     <h4>Be able code with others with all the languages in one file</h4>
                                     <p className="left-align light"></p>
                                 </div>
