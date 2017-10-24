@@ -91,12 +91,11 @@ class Room extends React.Component {
                                 </div>
                                 <div className="col s3"></div>
                             </div>
-
-
-
                         </div>
                     </div>
                     <div className="teal lighten-1" id="spaceDiv"></div>
+
+                    <Footer />
 
                 </div>
             )}

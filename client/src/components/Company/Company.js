@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer"
 
 import "./Company.css"
 
@@ -71,6 +72,7 @@ const Company = () =>
         </div>
     </div>
     </div>
+    <Footer />
 </div>
 
 
