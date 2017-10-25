@@ -1,6 +1,15 @@
 import React from "react";
+import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 
-const LoginModal = () =>
+const LoginModal = (props) =>
+    <Modal
+        isOpen={props.isOpen}
+        // onAfterOpen={afterOpenFn}
+        onRequestClose={props.isClosed}
+        // closeTimeoutMS={n}
+        // style={customStyle}
+        contentLabel="LoginModal">
     <div id="loginModal" className="modal modal-fixed-footer center authModal blue">
         <div id="loginBox">
             <div className="content">
@@ -19,11 +28,6 @@ const LoginModal = () =>
             </div>
         </div>
     </div>
+        </Modal>
 export default LoginModal;
 
-
-{/*<Modal*/}
-    {/*header='Modal Header'*/}
-    {/*trigger={<Button>MODAL</Button>}>*/}
-    {/*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>*/}
-{/*</Modal>*/}
