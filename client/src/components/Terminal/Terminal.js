@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import cx from 'classnames';
-//import {Button, Modal, Icon} from 'react-materialize';
+import {Tabs, Tab} from 'react-materialize';
 import Tree from 'react-ui-tree';
 import "./Terminal.css";
 //import axios from "axios";
@@ -179,7 +179,7 @@ class Terminal extends Component {
                                         </ul>
                                 </nav>
 
-                                <Editor ref="editor" height={this.state.editorHeight} readOnly={false} id='editor'/>
+                                <Editor ref="editor" height={this.state.editorHeight} readOnly={false} id='editor' lineNumbers={true}/>
 
                                 {/* <Editor 
                                     className="codemirror-textarea"
@@ -204,7 +204,10 @@ class Terminal extends Component {
                         </div> */}
 
                         <div className="panel-bottom">
-                            bottom panel
+                            <Tabs className='command'>
+                                <Tab title="Output" id="output-tab"><Editor ref="output" readOnly={true} id="output" height={this.state.editorHeight} lineNumbers={false}/></Tab>
+                                <Tab title="Terminal" id="terminal-tab"><Editor ref="cmd" readOnly={false} id="cmd" height={this.state.editorHeight} lineNumbers={false}/></Tab>
+                            </Tabs>    
                         </div>
                     </div>
                 </div>

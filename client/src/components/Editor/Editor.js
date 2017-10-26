@@ -36,12 +36,13 @@ class Editor extends Component{
 
     render(){
         let options = {
-            lineNumbers: true,
+            lineNumbers: this.props.lineNumbers,
             lineWrapping: true,
             viewportMargin: 10,
             showCursorWhenSelecting: true,
             theme: "rubyblue",
             readOnly: this.props.readOnly, 
+            
         };
         return(
             <CodeMirror ref="editor"  value={this.state.code} onChange={this.updateCode} options={options} id={this.props.id}/>
