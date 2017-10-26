@@ -178,7 +178,7 @@ class Terminal extends Component {
                                         </ul>
                                 </nav>
 
-                                <Editor readOnly={false}/>
+                                <Editor ref="editor_child" height={400} readOnly={false} id="codemirror-editor"/>
 
                                 {/* <Editor 
                                     className="codemirror-textarea"

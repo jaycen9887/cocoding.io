@@ -9,6 +9,24 @@ class Editor extends Component{
     state = {
         code: "",
     }
+
+    componentDidMount() {
+        let width = this.props.width;
+        let height = this.props.height; 
+        const cm = this.refs.editor.getCodeMirror();
+        cm.setSize(width, height);
+    }
+
+    getCode = () => {
+        console.log(this.state.code);
+
+        return this.state.code;
+    }
+
+    /* divStyle = {
+        height: "100%"
+    } */
+
     updateCode = (newCode) => {
         this.setState({
            code: newCode, 
@@ -24,7 +42,7 @@ class Editor extends Component{
             readOnly: this.props.readOnly, 
         };
         return(
-            <CodeMirror  value={this.state.code} onChange={this.updateCode} options={options}/>
+            <CodeMirror ref="editor"  value={this.state.code} onChange={this.updateCode} options={options} id={this.props.id}/>
         );
     }
 }
