@@ -124,6 +124,26 @@ h5 {
   color: black;
 }
 
+#head1 {
+  font-size: 60px;
+  line-height: 90%;
+  font-family: 'Saira Extra Condensed', sans-serif;
+
+}
+
+#head2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+#head3 {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+
+}
+
 #robotBg {
   opacity: .2;
 }

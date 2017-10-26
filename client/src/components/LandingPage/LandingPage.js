@@ -19,7 +19,7 @@ class LandingPage extends React.Component {
 
     handleSignUpClick = () => {
         //console.log('this is:', this);
-        axios.post('/login', {
+        axios.post('/signup', {
             params: {
                 username: this.state.signUpUserName,
                 password: this.state.signUpPassword
@@ -30,7 +30,7 @@ class LandingPage extends React.Component {
             window.location.href = "/room";
         })
         .catch(function(error) {
-            console.log( "Login Fail" );
+            console.log( "Sign Up Fail" );
         });
     }
 
@@ -145,7 +145,7 @@ class LandingPage extends React.Component {
 
                 {/*<div id="codebgDiv">*/}
 
-                <div className="parallax-container valign-wrapper blue-grey lighten-2">
+                <div className="parallax-container valign-wrapper  teal accent-1">
                     <div className="section no-pad-bot">
                         <div className="container">
                             <div className="row center">
@@ -160,12 +160,14 @@ class LandingPage extends React.Component {
                                         <div className="col m12 m7 ">
                                             <div className="card z-depth-3 hoverable">
                                                 <div className="card-image">
-                                                    <img src="img/step3image.png"/>
+                                                    <img src="img/coCode.png"/>
 
                                                 </div>
-                                                <div className="card-content blue">
-                                                    <h4>coCode</h4>
-                                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                                <div className="card-content teal accent-4">
+
+                                                    <div className="row" id="head1">coCode</div>
+                                                    <div className="row" id="head2">code with peeps</div>
+                                                    <p id="head3">I am a very simple card. I am good at containing small bits of information.
                                                         I am convenient because I require little markup to use effectively.</p>
                                                 </div>
                                             </div>
@@ -175,13 +177,13 @@ class LandingPage extends React.Component {
                                     <div className="col m12 m7">
                                         <div className="card z-depth-3 hoverable">
                                             <div className="card-image">
-                                                <img src="img/step3image.png"/>
+                                                <img src="img/theme.png"/>
 
                                             </div>
-                                            <div className="card-content blue">
-                                                <h4>Themes</h4>
-                                                <p>I am a very simple card. I am good at containing small bits of information.
-                                                    I am convenient because I require little markup to use effectively.</p>
+                                            <div className="card-content teal accent-4">
+                                                <div className="row" id="head1">Themes</div>
+                                                <div className="row" id="head2">Colorful schemes</div>
+                                                <p id="head3">Choose from over 30 themes to make your editor more colorful. Just pick the right schemes for your project.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -190,12 +192,13 @@ class LandingPage extends React.Component {
                                     <div className="col m12 m7">
                                         <div className="card z-depth-3 hoverable">
                                             <div className="card-image">
-                                                <img src="img/step3image.png"/>
+                                                <img src="img/chat.png"/>
 
                                             </div>
-                                            <div className="card-content blue">
-                                                <h4>Chat</h4>
-                                                <p>I am a very simple card. I am good at containing small bits of information.
+                                            <div className="card-content teal accent-4">
+                                                <div className="row" id="head1">Chat</div>
+                                                <div className="row" id="head2">Be able to chat with others</div>
+                                                <p id="head3">I am a very simple card. I am good at containing small bits of information.
                                                     I am convenient because I require little markup to use effectively.</p>
                                             </div>
                                         </div>
@@ -207,12 +210,13 @@ class LandingPage extends React.Component {
                                     <div className="col m12 m7">
                                         <div className="card z-depth-3 hoverable">
                                             <div className="card-image">
-                                                <img src="img/step3image.png"/>
+                                                <img src="img/video.png"/>
 
                                             </div>
-                                            <div className="card-content blue">
-                                                <h4>Video Chat</h4>
-                                                <p>I am a very simple card. I am good at containing small bits of information.
+                                            <div className="card-content teal accent-4">
+                                                <div className="row" id="head1">Video Chat</div>
+                                                <div className="row" id="head2">Be able to see the coder live</div>
+                                                <p id="head3">I am a very simple card. I am good at containing small bits of information.
                                                     I am convenient because I require little markup to use effectively.</p>
                                             </div>
                                         </div>
@@ -222,12 +226,13 @@ class LandingPage extends React.Component {
                                     <div className="col m12 m7">
                                         <div className="card z-depth-3 hoverable">
                                             <div className="card-image">
-                                                <img src="img/step3image.png"/>
+                                                <img src="img/database.png"/>
 
                                             </div>
-                                            <div className="card-content blue">
-                                                <h4>Database</h4>
-                                                <p>I am a very simple card. I am good at containing small bits of information.
+                                            <div className="card-content teal accent-4">
+                                                <div className="row" id="head1">Database</div>
+                                                <div className="row" id="head2">Create database faster</div>
+                                                <p id="head3">I am a very simple card. I am good at containing small bits of information.
                                                     I am convenient because I require little markup to use effectively.</p>
                                             </div>
                                         </div>
@@ -237,12 +242,13 @@ class LandingPage extends React.Component {
                                     <div className="col m12 m7">
                                         <div className="card z-depth-3 hoverable">
                                             <div className="card-image">
-                                                <img src="img/step3image.png"/>
+                                                <img src="img/gitHub.png"/>
 
                                             </div>
-                                            <div className="card-content blue">
-                                                <h4>Push to Git</h4>
-                                                <p>I am a very simple card. I am good at containing small bits of information.
+                                            <div className="card-content teal accent-4">
+                                                <div className="row" id="head1">Github</div>
+                                                <div className="row" id="head2">Be able to push to Github</div>
+                                                <p id="head3">I am a very simple card. I am good at containing small bits of information.
                                                     I am convenient because I require little markup to use effectively.</p>
                                             </div>
                                         </div>
@@ -255,9 +261,9 @@ class LandingPage extends React.Component {
                     {/*</div>*/}
                 </div>
 
-                <Parallax imageSrc="img/codebg.png"/>
+                <Parallax imageSrc="img/middlebg.png"/>
 
-                <div className="langBox blue-grey darken-4">
+                <div className="langBox teal lighten-2">
                     <div className="container ">
                         <div className="section">
                             <div className="row ">
@@ -277,8 +283,8 @@ class LandingPage extends React.Component {
                 <div className="parallax-container valign-wrapper white">
                     <div className="section no-pad-bot">
                         <div className="container">
-                            <div className="col s12" id="div3Info"></div>
-
+                            <div className="row"></div>
+                            <div className="row"></div>
                             <div className="row center">
                                 {/*add video here*/}
                                 <div class = "video-container" >
@@ -286,7 +292,8 @@ class LandingPage extends React.Component {
                                             src = "https://www.youtube.com/embed/Q8TXgCzxEnw?rel=0"
                                             frameborder = "0" allowfullscreen ></iframe>
                                 </div>
-                                <div className="col s12" id="div3Info"></div>
+                                <div className="row"></div>
+                                <div className="row"></div>
                                 {/* <div className="col s12"id="div3Info"><h4>Start Learning to Code Today</h4></div> */}
                                 <div className="row" id="howWorksTitle">Start coCoding Today</div>
                                 <h5 className="header col s12 light"><a className="btn modal-trigger pulse"

@@ -44,6 +44,7 @@ class Room extends React.Component {
                 <div>
                     <div className="section no-pad-bot teal lighten-1">
                         <div id="spaceDiv2"></div>
+                        {/*<div imageSrc="img/codebg.png"></div>*/}
                         <div className="row" id="texture">
                             <div className="col s12">
                                 <div className="row"></div>

@@ -1,9 +1,22 @@
 import React, { Component } from "react";
 import {Button, Modal, Icon} from 'react-materialize';
 import "./Nav.css";
+import axios from "axios";
 import LoginModal from "../Modal";
 
 class Nav extends Component {
+    componentDidMount() {
+        // axios.get('/user', {
+    //     withCredentials: true
+    // })
+        axios('/user', {
+            method: 'get',
+            withCredentials: true
+        })
+        .then(function(response){
+            console.log(response);
+        });
+    }
     state={isOpen:false}
 
     toggleOpen = () =>{
