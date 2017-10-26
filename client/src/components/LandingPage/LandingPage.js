@@ -145,11 +145,12 @@ class LandingPage extends Component {
 
                 {/*<div id="codebgDiv">*/}
 
-                <div className="parallax-container valign-wrapper  teal accent-1">
+                <div className="parallax-container valign-wrapper  blue-grey darken-4">
+                    {/*teal accent-1*/}
                     <div className="section no-pad-bot">
                         <div className="container">
                             <div className="row center">
-                                <h1 id="howWorksTitle">Cool Features</h1>
+                                <h1 id="coolFeatureText">Cool Features</h1>
                             </div>
                             {/*<!--<div className="row center">-->*/}
                             {/*<!--<h5 className="header col s12 light"></h5>-->*/}

@@ -73,6 +73,13 @@ nav .brand-logo {
   color: black;
 }
 
+#coolFeatureText {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
 p {
   line-height: 2rem;
 
@@ -168,6 +175,15 @@ footer.page-footer {
 
 #empowerText {
   color: #212122;
+  font-size: 35px;
+  margin-top: 130px;
+  margin-left: 15px;
+  color: black;
+}
+
+#empowerTextSub {
+  margin-left: 15px;
+  font-size: 20px;
 }
 
 #roomDiv {
