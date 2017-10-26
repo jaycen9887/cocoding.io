@@ -83,3 +83,21 @@
 .caret-down:before {
     content: '\25BE';
 }
+
+/* .command {
+    width: 100% !important;
+    margin: 0px;
+    padding: 0px;
+} */
+
+Tab {
+    width: 400px;
+    margin: 0px;
+    padding: 0px;
+}
+
+Tabs {
+    width: 400px;
+    margin: 0px;
+    padding: 0px;
+}

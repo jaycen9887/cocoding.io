@@ -9,22 +9,43 @@ class Editor extends Component{
     state = {
         code: "",
     }
+
+    /* divStyle = {
+        height: "100%"
+    } */
+
+    componentDidMount() {
+        let width = this.props.width;
+        let height = this.props.height; 
+        const cm = this.refs.editor.getCodeMirror();
+        cm.setSize(width, height);
+    }
+
     updateCode = (newCode) => {
         this.setState({
            code: newCode, 
         });
     }
+
+    getCode = () => {
+        console.log(this.state.code);
+
+        return this.state.code;
+    }
+
+
     render(){
         let options = {
-            lineNumbers: true,
+            lineNumbers: this.props.lineNumbers,
             lineWrapping: true,
             viewportMargin: 10,
             showCursorWhenSelecting: true,
             theme: "rubyblue",
             readOnly: this.props.readOnly, 
+            
         };
         return(
-            <CodeMirror  value={this.state.code} onChange={this.updateCode} options={options}/>
+            <CodeMirror ref="editor"  value={this.state.code} onChange={this.updateCode} options={options} id={this.props.id}/>
         );
     }
 }

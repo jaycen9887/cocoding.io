@@ -3,8 +3,8 @@ module.exports = {
     'localdbconnection': {
         'host': 'localhost',
         'user': 'root',
-        'password': 'pass123',
-        'database': 'cocoders_db'/*cocoders_db*/
+        'password': 'root', /* 'pass123', */
+        'database': 'cocoding'/*cocoders_db*/
     },
 
     'users_table': 'users',
