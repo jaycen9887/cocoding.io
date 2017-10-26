@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Footer from "../Footer"
 
-class Room extends React.Component {
+class Room extends Component {
     constructor(props) {
         super(props);
         this.state = {

@@ -6,7 +6,7 @@ import LandingPage from "./components/LandingPage";
 import Company from "./components/Company";
 import Classroom from "./components/Classroom";
 import Room from "./components/Room";
-import Footer from "./components/Footer"
+//import Footer from "./components/Footer"
 import Terminal from "./components/Terminal"
 
 const App = () =>

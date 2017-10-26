@@ -5,7 +5,7 @@ import axios from "axios";
 import Footer from "../Footer"
 
 
-class LandingPage extends React.Component {
+class LandingPage extends Component {
     constructor(props) {
         super(props);
         this.state = {signUpUserName: '', signUpPassword: ''};

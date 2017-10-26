@@ -1,1 +1,2 @@
-export { default } from "./Splitter";
+export * from "./VertSplitter";
+export * from "./HorizSplitter";

@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import cx from 'classnames';
-import {Button, Modal, Icon} from 'react-materialize';
+//import {Button, Modal, Icon} from 'react-materialize';
 import Tree from 'react-ui-tree';
 import "./Terminal.css";
-import axios from "axios";
+//import axios from "axios";
+//import Editor from "./editor"; 
+//import {VertSplitter, HorizSplitter} from "../Splitter";
+import Editor from "../Editor";
 
 const tree = {
     module: 'react-ui-tree',
@@ -99,7 +102,7 @@ const tree = {
     ]
 };
 
-class Terminal extends React.Component {
+class Terminal extends Component {
 
     constructor(props) {
         super(props);
@@ -152,9 +155,9 @@ class Terminal extends React.Component {
                         renderNode={this.renderNode}
                     />
                 </div>
-
-                <div className="splitter">
-                </div>
+                {/* <VertSplitter /> */}
+                {/* <div className="splitter">
+                </div> */}
 
                 <div className="panel-right">
 
@@ -174,11 +177,19 @@ class Terminal extends React.Component {
                                             <li><a href="#" id="isSignDiv"></a></li>
                                         </ul>
                                 </nav>
-                                <form id="preview-form">
+
+                                <Editor readOnly={false}/>
+
+                                {/* <Editor 
+                                    className="codemirror-textarea"
+                                    theme={"rubyblue"}
+                                    readOnly={false}
+                                /> */}
+                                 {/* <form id="preview-form">
                                     <textarea className="codemirror-textarea" name="editor-value" id="editor-value" rows="4" cols="10">&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;</textarea>
                                     <br/>
-                                    {/*<!--<input type="submit" name="submit" id="submit" value="submit">-->*/}
-                                </form>
+                                    
+                                </form>  */}
                             </div>
                         </div>
 
@@ -187,9 +198,9 @@ class Terminal extends React.Component {
                         {/*<!--</div>-->*/}
 
 
-
-                        <div className="splitter-horizontal">
-                        </div>
+                        {/* <HorizSplitter /> */}
+                        {/* <div className="splitter-horizontal">
+                        </div> */}
 
                         <div className="panel-bottom">
                             bottom panel
