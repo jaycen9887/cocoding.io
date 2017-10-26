@@ -145,7 +145,7 @@ class LandingPage extends Component {
 
                 {/*<div id="codebgDiv">*/}
 
-                <div className="parallax-container valign-wrapper  blue-grey darken-4">
+                <div className="parallax-container valign-wrapper  blue-grey darken-4" id="coolFeatureDiv">
                     {/*teal accent-1*/}
                     <div className="section no-pad-bot">
                         <div className="container">
