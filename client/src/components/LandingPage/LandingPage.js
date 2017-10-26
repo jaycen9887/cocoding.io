@@ -168,8 +168,7 @@ class LandingPage extends Component {
 
                                                     <div className="row" id="head1">coCode</div>
                                                     <div className="row" id="head2">code with peeps</div>
-                                                    <p id="head3">I am a very simple card. I am good at containing small bits of information.
-                                                        I am convenient because I require little markup to use effectively.</p>
+                                                    <p id="head3">Be able to code with other coders on projects. Its fun and easy just create a classroom and invite other coders to coCode with you.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -197,10 +196,9 @@ class LandingPage extends Component {
 
                                             </div>
                                             <div className="card-content teal accent-4">
-                                                <div className="row" id="head1">Chat</div>
+                                                <div className="row" id="head1">Messaging</div>
                                                 <div className="row" id="head2">Be able to chat with others</div>
-                                                <p id="head3">I am a very simple card. I am good at containing small bits of information.
-                                                    I am convenient because I require little markup to use effectively.</p>
+                                                <p id="head3">coCoding allows coders to code and message live while you are coding. Be able to make changes faster and more efficient.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -217,8 +215,7 @@ class LandingPage extends Component {
                                             <div className="card-content teal accent-4">
                                                 <div className="row" id="head1">Video Chat</div>
                                                 <div className="row" id="head2">Be able to see the coder live</div>
-                                                <p id="head3">I am a very simple card. I am good at containing small bits of information.
-                                                    I am convenient because I require little markup to use effectively.</p>
+                                                <p id="head3">Video chat face to face with other coders. This feature is great for interviews and off site coding.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -233,8 +230,7 @@ class LandingPage extends Component {
                                             <div className="card-content teal accent-4">
                                                 <div className="row" id="head1">Database</div>
                                                 <div className="row" id="head2">Create database faster</div>
-                                                <p id="head3">I am a very simple card. I am good at containing small bits of information.
-                                                    I am convenient because I require little markup to use effectively.</p>
+                                                <p id="head3">create tables right in the editor. This features makes it so make and easier to space data in real time.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -249,8 +245,7 @@ class LandingPage extends Component {
                                             <div className="card-content teal accent-4">
                                                 <div className="row" id="head1">Github</div>
                                                 <div className="row" id="head2">Be able to push to Github</div>
-                                                <p id="head3">I am a very simple card. I am good at containing small bits of information.
-                                                    I am convenient because I require little markup to use effectively.</p>
+                                                <p id="head3">Be able to folk your coCoding project right to Github with just a click of a button.</p>
                                             </div>
                                         </div>
                                     </div>
