@@ -73,6 +73,18 @@ nav .brand-logo {
   color: black;
 }
 
+#coolFeatureDiv {
+  background-image: repeating-linear-gradient(-45deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 1px, transparent 1px, transparent 6px);
+  background-size: 4px 4px;
+}
+
+#coolFeatureText {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
 p {
   line-height: 2rem;
 
@@ -124,6 +136,26 @@ h5 {
   color: black;
 }
 
+#head1 {
+  font-size: 60px;
+  line-height: 90%;
+  font-family: 'Saira Extra Condensed', sans-serif;
+
+}
+
+#head2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+#head3 {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+
+}
+
 #robotBg {
   opacity: .2;
 }
@@ -148,6 +180,15 @@ footer.page-footer {
 
 #empowerText {
   color: #212122;
+  font-size: 35px;
+  margin-top: 130px;
+  margin-left: 15px;
+  color: black;
+}
+
+#empowerTextSub {
+  margin-left: 15px;
+  font-size: 20px;
 }
 
 #roomDiv {

@@ -15,8 +15,8 @@ const Company = () =>
                     <div className="row" id="howWorksTitle"></div>
                     <div className="row" id="howWorksTitle"></div>
                     <div className="col s6">
-                        <h1 id="empowerText">"cocoding empowers companies by saving them time and money"</h1>
-                        <h6 className="black-text" >-Meka Knepley, full stack developer</h6>
+                        <h1 id="empowerText">"cocoding empowers <br/>companies by saving them <br/>time and money"</h1>
+                        <h6 className="black-text" id="empowerTextSub" >-Meka Knepley, full stack developer</h6>
                     </div>
                     <div className="row" id="howWorksTitle"></div>
                     <h5 className="header col s12 light"><a className="btn modal-trigger pulse" data-target="signUpModal" href="#signUpModal">Start Now</a></h5>

@@ -94,6 +94,14 @@ module.exports = function(app, passport, opentok) {
         /********** ******** *********/
     });
 
+    router.get('/user', function (req, res) {
+        if (!req.isAuthenticated())
+        {
+            return res.json({userName: "not logged in"});
+        }
+        return res.json(req.user);
+    });
+
     router.get('/login', function (req, res) {
         res.render("LandingPage");
     });
@@ -231,7 +239,6 @@ module.exports = function(app, passport, opentok) {
     });
 
     router.post("/login", passport.authenticate('local-login', {
-            successRedirect: "/room",
             failureRedirect: "/",
             failureFlash: false
         }),
@@ -241,6 +248,8 @@ module.exports = function(app, passport, opentok) {
             } else {
                 req.session.cookie.expires = false;
             }
+            console.log("logged in");
+            return res.json({ success: true, message: "authentication succeeded" })
         });
 
     app.get('/auth/google',
