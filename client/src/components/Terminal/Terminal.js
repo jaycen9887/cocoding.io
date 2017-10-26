@@ -108,7 +108,8 @@ class Terminal extends Component {
         super(props);
         this.state = {
             active: null,
-            tree: tree
+            tree: tree,
+            editorHeight: 400,
         };
     }
 
@@ -178,7 +179,7 @@ class Terminal extends Component {
                                         </ul>
                                 </nav>
 
-                                <Editor ref="editor_child" height={400} readOnly={false} id="codemirror-editor"/>
+                                <Editor ref="editor" height={this.state.editorHeight} readOnly={false} id='editor'/>
 
                                 {/* <Editor 
                                     className="codemirror-textarea"

@@ -10,11 +10,21 @@ class Editor extends Component{
         code: "",
     }
 
+    /* divStyle = {
+        height: "100%"
+    } */
+
     componentDidMount() {
         let width = this.props.width;
         let height = this.props.height; 
         const cm = this.refs.editor.getCodeMirror();
         cm.setSize(width, height);
+    }
+
+    updateCode = (newCode) => {
+        this.setState({
+           code: newCode, 
+        });
     }
 
     getCode = () => {
@@ -23,15 +33,7 @@ class Editor extends Component{
         return this.state.code;
     }
 
-    /* divStyle = {
-        height: "100%"
-    } */
 
-    updateCode = (newCode) => {
-        this.setState({
-           code: newCode, 
-        });
-    }
     render(){
         let options = {
             lineNumbers: true,
