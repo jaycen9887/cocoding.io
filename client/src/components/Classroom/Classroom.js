@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Parallax} from 'react-materialize';
+//import {Parallax} from 'react-materialize';
 import "./Classroom.css"
 
 class Classroom extends Component {

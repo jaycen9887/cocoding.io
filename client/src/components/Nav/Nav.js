@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Button, Modal, Icon} from 'react-materialize';
+//import {Button, Modal, Icon} from 'react-materialize';
 import "./Nav.css"
 
 class Nav extends Component {
