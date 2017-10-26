@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-//import Footer from "../Footer"
+import Footer from "../Footer"
 
 class Room extends Component {
     constructor(props) {
@@ -91,12 +91,11 @@ class Room extends Component {
                                 </div>
                                 <div className="col s3"></div>
                             </div>
-
-
-
                         </div>
                     </div>
                     <div className="teal lighten-1" id="spaceDiv"></div>
+
+                    <Footer />
 
                 </div>
             )}

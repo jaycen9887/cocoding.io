@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 //import {Parallax} from 'react-materialize';
 import "./Classroom.css"
+import Footer from "../Footer"
 
 class Classroom extends Component {
     render() {
@@ -98,6 +99,7 @@ class Classroom extends Component {
             </div>
         </div>
     </div>
+    <Footer />
 
 </div>
         );
