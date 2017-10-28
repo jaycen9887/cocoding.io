@@ -63,11 +63,11 @@
         display: inline-block;
         width: 100%;
         padding: 4px 5px;
-
-    &.is-active {
-         background-color: #31363F;
-     }
     }
+}
+
+.is-active {
+    background-color: #31363F;
 }
 
 .collapse {

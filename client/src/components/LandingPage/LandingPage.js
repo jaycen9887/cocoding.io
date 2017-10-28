@@ -145,7 +145,7 @@ class LandingPage extends Component {
 
                 {/*<div id="codebgDiv">*/}
 
-                <div className="parallax-container valign-wrapper  blue-grey darken-4" id="coolFeatureDiv">
+                <div className="parallax-container valign-wrapper  teal accent-1" id="coolFeatureDiv">
                     {/*teal accent-1*/}
                     <div className="section no-pad-bot">
                         <div className="container">
@@ -164,11 +164,11 @@ class LandingPage extends Component {
                                                     <img src="img/coCode.png"/>
 
                                                 </div>
-                                                <div className="card-content teal accent-4">
+                                                <div className="card-content cyan accent-4">
 
                                                     <div className="row" id="head1">coCode</div>
                                                     <div className="row" id="head2">code with peeps</div>
-                                                    <p id="head3">Be able to code with other coders on projects. Its fun and easy just create a classroom and invite other coders to coCode with you.</p>
+                                                    <p id="head3">Code with other coders on projects. Its fun and easy just create a classroom and invite other coders to coCode with you.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -180,7 +180,7 @@ class LandingPage extends Component {
                                                 <img src="img/theme.png"/>
 
                                             </div>
-                                            <div className="card-content teal accent-4">
+                                            <div className="card-content cyan accent-4">
                                                 <div className="row" id="head1">Themes</div>
                                                 <div className="row" id="head2">Colorful schemes</div>
                                                 <p id="head3">Choose from over 30 themes to make your editor more colorful. Just pick the right schemes for your project.</p>
@@ -195,7 +195,7 @@ class LandingPage extends Component {
                                                 <img src="img/chat.png"/>
 
                                             </div>
-                                            <div className="card-content teal accent-4">
+                                            <div className="card-content cyan accent-4">
                                                 <div className="row" id="head1">Messaging</div>
                                                 <div className="row" id="head2">Be able to chat with others</div>
                                                 <p id="head3">coCoding allows coders to code and message live while you are coding. Be able to make changes faster and more efficient.</p>
@@ -212,7 +212,7 @@ class LandingPage extends Component {
                                                 <img src="img/video.png"/>
 
                                             </div>
-                                            <div className="card-content teal accent-4">
+                                            <div className="card-content cyan accent-4">
                                                 <div className="row" id="head1">Video Chat</div>
                                                 <div className="row" id="head2">Be able to see the coder live</div>
                                                 <p id="head3">Video chat face to face with other coders. This feature is great for interviews and off site coding.</p>
@@ -227,7 +227,7 @@ class LandingPage extends Component {
                                                 <img src="img/database.png"/>
 
                                             </div>
-                                            <div className="card-content teal accent-4">
+                                            <div className="card-content cyan accent-4">
                                                 <div className="row" id="head1">Database</div>
                                                 <div className="row" id="head2">Create database faster</div>
                                                 <p id="head3">create tables right in the editor. This features makes it so make and easier to space data in real time.</p>
@@ -242,10 +242,10 @@ class LandingPage extends Component {
                                                 <img src="img/gitHub.png"/>
 
                                             </div>
-                                            <div className="card-content teal accent-4">
+                                            <div className="card-content cyan accent-4">
                                                 <div className="row" id="head1">Github</div>
                                                 <div className="row" id="head2">Be able to push to Github</div>
-                                                <p id="head3">Be able to folk your coCoding project right to Github with just a click of a button.</p>
+                                                <p id="head3">Be able to folk your coCoding project right to Github with just a click of a button and be able to pull your projects also.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -292,6 +292,7 @@ class LandingPage extends Component {
                                 <div className="row"></div>
                                 {/* <div className="col s12"id="div3Info"><h4>Start Learning to Code Today</h4></div> */}
                                 <div className="row" id="howWorksTitle">Start coCoding Today</div>
+                                <div className="row"></div>
                                 <h5 className="header col s12 light"><a className="btn modal-trigger pulse"
                                                                         data-target="signUpModal" href="#signUpModal">Start
                                     Now</a></h5>

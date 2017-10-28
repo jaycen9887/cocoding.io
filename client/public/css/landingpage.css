@@ -34,15 +34,15 @@ nav .brand-logo {
 
 }
 
-.side-nav {
-  color: white;
-  width: 50px;
-  position: absolute;
-  top: 60px;
-  right: 0px;
-  bottom: 0;
-  height: 600px;
-}
+/*.side-nav {*/
+  /*color: white;*/
+  /*width: 50px;*/
+  /*position: absolute;*/
+  /*top: 60px;*/
+  /*right: 0px;*/
+  /*bottom: 0;*/
+  /*height: 600px;*/
+/*}*/
 
 #tagLine {
   font-size: 65px;
@@ -68,21 +68,23 @@ nav .brand-logo {
 
 #howWorksTitle {
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'Fjalla One', sans-serif;
   color: black;
+  text-shadow: 2px 5px 1px grey;
 }
 
 #coolFeatureDiv {
-  background-image: repeating-linear-gradient(-45deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 1px, transparent 1px, transparent 6px);
-  background-size: 4px 4px;
+  background-image: repeating-linear-gradient(223deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 1px, transparent 0px, transparent 2px);
+  background-size: 80px;
 }
 
 #coolFeatureText {
   font-family: 'Fjalla One', sans-serif;
-  font-size: 50px;
-  color: white;
+  font-size: 60px;
+  color: deepskyblue;
   text-align: center;
+  text-shadow: 2px 5px 1px #3083FF;
 }
 
 p {
@@ -334,8 +336,10 @@ footer.page-footer {
   height: 400px !important;
   min-height: 150px;
   background: #111111;
-  width: 1165px;
+  width:1165px;
   margin: 0px;
   overflow: hidden;
+
+
 }
 

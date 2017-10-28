@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import CodeMirror from 'react-codemirror';
 import * as firebase from 'firebase';
 import "firebase/database";
-import {sqldb} from "../../Config/SQLConfig";
+import {sqldb} from "../../Config/firebaseConfig";
 
 import 'codemirror/lib/codemirror.css';
 import "codemirror/lib/codemirror.js";
