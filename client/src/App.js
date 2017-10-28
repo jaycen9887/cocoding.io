@@ -9,11 +9,12 @@ import Room from "./components/Room";
 //import Footer from "./components/Footer"
 import Terminal from "./components/Terminal"
 import CCSideNav from "./components/CCSideNav"
+import TestPage from "./components/TestPage"
 
 const App = () =>
     <Router>
         <div>
-            <Nav />
+            {/*<Nav />*/}
             <Switch>
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/companies" component={Company} />
@@ -22,6 +23,7 @@ const App = () =>
                 <Route exact path="/terminal/:id" component={Terminal} />
 
                 <Route exact path="/sidenavtest" component={CCSideNav} />
+                <Route exact path="/editortest" component={TestPage} />
             </Switch>
             {/*<Footer />*/}
         </div>

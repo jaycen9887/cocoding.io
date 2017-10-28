@@ -14,6 +14,7 @@
     "passport-twitter": "^1.0.4",
     "react": "^16.0.0",
     "react-codemirror": "^1.0.0",
+    "react-codemirror2": "^3.0.3",
     "react-dom": "^16.0.0",
     "react-materialize": "^1.0.16",
     "react-modal": "^3.1.0",
