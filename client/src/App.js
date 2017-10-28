@@ -8,6 +8,7 @@ import Classroom from "./components/Classroom";
 import Room from "./components/Room";
 //import Footer from "./components/Footer"
 import Terminal from "./components/Terminal"
+import CCSideNav from "./components/CCSideNav"
 
 const App = () =>
     <Router>
@@ -19,6 +20,8 @@ const App = () =>
                 <Route exact path="/classrooms" component={Classroom} />
                 <Route exact path="/room" component={Room} />
                 <Route exact path="/terminal/:id" component={Terminal} />
+
+                <Route exact path="/sidenavtest" component={CCSideNav} />
             </Switch>
             {/*<Footer />*/}
         </div>

@@ -109,6 +109,6 @@ ul{
     left: 0px !important;
 } */
 
-.row .col {
+.panel-bottom .row .col {
     padding: 0px !important;
 }
