@@ -228,7 +228,7 @@ class Terminal extends Component {
                                         {/*<i className="small material-icons center" id="icons">chat</i>*/}
                                         {/*<i className="small material-icons center" id="icons">voice_chat</i>*/}
                                         {/*<i className="small material-icons center" id="icons">person_add</i>*/}
-                                        {/*<i className="small material-icons center" id="icons">directions_run</i>*/}
+                                        {/*<i className="small material-icons center" id="icons" onClick={this.query}>directions_run</i>*/}
                                         {/*<a id="logo-container " href="#" class="brand-logo"></a>*/}
                                         {/*<ul id="nav-mobile" class="right hide-on-med-and-down">*/}
                                             {/*<li><a href="#" id="isSignDiv"></a></li>*/}
