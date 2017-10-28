@@ -7,7 +7,7 @@ import Company from "./components/Company";
 import Classroom from "./components/Classroom";
 import Room from "./components/Room";
 //import Footer from "./components/Footer"
-import Terminal from "./components/Terminal"
+import Terminal from "./components/Terminal";
 
 const App = () =>
     <Router>

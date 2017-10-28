@@ -1,0 +1,7 @@
+.deletebtn {
+    color: #ffab40;
+}
+
+.deletebtn:hover {
+    opacity: .5;
+}
