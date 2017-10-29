@@ -1,6 +1,6 @@
 #tab_00 {
-    background-color: black;
+    background-color: #111111;
     color: white;
-    height: 396px;
+    height: 100vh;
     overflow-y: auto;
 }

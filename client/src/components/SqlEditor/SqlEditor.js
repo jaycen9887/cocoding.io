@@ -107,7 +107,7 @@ class SQLEditor extends Component{
     /* updateCode = (newCode) => {
         this.setState({
            code: newCode, 
-        });
+        }); 
         console.log(newCode);
 
     } */

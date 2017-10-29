@@ -91,7 +91,7 @@
 } */
 
 Tab {
-    width: 400px;
+    
     margin: 0px;
     padding: 0px;
 }
@@ -100,4 +100,11 @@ Tabs {
     width: 400px;
     margin: 0px;
     padding: 0px;
+    height: 100vh;
+}
+
+.panel-bottom .command {
+    width: 98%;
+    float: left;
+    height: 100%;
 }

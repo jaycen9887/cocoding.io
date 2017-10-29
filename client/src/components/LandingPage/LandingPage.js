@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import {Parallax} from 'react-materialize';
 import "./LandingPage.css"
 import axios from "axios";
-import Footer from "../Footer"
+import Footer from "../Footer";
+import Nav from "../Nav";
 
 
 class LandingPage extends Component {
@@ -37,7 +38,7 @@ class LandingPage extends Component {
     render() {
         return (
             <div>
-
+                <Nav />
                 <div className="section no-pad-bot">
                     {/* <div className="container"> */}
                     <div id="layingimageDiv">

@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import * as firebase from 'firebase';
 import "firebase/database";
 import dbapp from "../../Config/firebaseConfig";
+import CodeMirror from "react-codemirror";
 
 
-import CodeMirror from 'react-codemirror';
+//import {UnControlled as CodeMirror} from 'react-codemirror2';
 
 import 'codemirror/lib/codemirror.css';
 import "codemirror/lib/codemirror.js";
@@ -19,7 +20,7 @@ import 'codemirror/addon/edit/closebrackets';
 import 'codemirror/addon/search/match-highlighter';
 
 
-class Editor extends Component{
+class Editor extends React.Component {
     constructor(props) {
         super(props);
 
@@ -65,29 +66,23 @@ class Editor extends Component{
         roomsdb.on('value', snap => {
             /* console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
             console.log(snap.val().content);  */
-           previousValue = snap.val().content; 
+            if(snap.val() !== null){
+                previousValue = snap.val().content; 
 
-           this.setState({
-            code: previousValue
+                this.setState({
+                    code: previousValue
+                });
+
+                let cursor = this.state.editor.getCursor();
+                let cursorLine = cursor.line;
+                let cursorCh = cursor.ch;
+                this.state.editor.getDoc().setValue(this.state.code);
+                this.state.editor.setCursor({line: cursorLine, ch:cursorCh});
+
+                this.state.editor.focus();
+               
+            }
         });
-
-        //console.log(previousValue);
-
-        this.state.editor.refresh();
-        let cursor = this.state.editor.getCursor();
-        let cursorLine = cursor.line;
-        let cursorCh = cursor.ch;
-        this.state.editor.getDoc().setValue(this.state.code);
-        this.state.editor.setCursor({line: cursorLine, ch:cursorCh});
-
-        this.state.editor.focus();
-        //this.state.editor.setValue(this.state.code);
-            
-
-            //this.updateCode(this.state.code);
-
-            //console.log("THE STATE CODE IS NOW: " + this.state.code);
-        })
 
       
 
@@ -111,7 +106,7 @@ class Editor extends Component{
             previousValue = previousValue + snap.val();
         });
 
-        return previousValue;
+        return "<getCodeDb>";
     }
 
     updateCode = (newCode) => {
@@ -135,6 +130,13 @@ class Editor extends Component{
         return this.state.code;
     }
 
+    testChangeMode = () => {
+        console.log("testCodeUpdate");
+        this.setState({
+            mode: "markdown",
+            code: "TEST TEST TEST"
+        });
+    }
 
     render(){
         let options = {
@@ -146,7 +148,10 @@ class Editor extends Component{
             mode:this.state.mode            
         };
         return(
-            <CodeMirror ref="editor" roomsdb={this.props.room} value={this.state.code} onChange={this.updateCode} options={options} id={this.props.id}/>
+            <div>
+                <CodeMirror ref="editor" roomsdb={this.props.room} value={this.state.code}
+                            onChange={this.updateCode} options={options} autoFocus={true} />
+            </div>
         );
     }
 }

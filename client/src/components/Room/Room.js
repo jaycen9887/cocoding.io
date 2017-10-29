@@ -7,6 +7,7 @@ import * as firebase from 'firebase';
 import 'firebase/database';
 import dbapp from "../../Config/firebaseConfig";
 import RoomSetup from "../RoomSetup";
+import Nav from "../Nav";
 
 class Room extends Component {
     constructor(props) {
@@ -91,6 +92,7 @@ class Room extends Component {
         render() {
             return(
                 <div>
+                    <Nav />
                     <div className="section no-pad-bot teal lighten-1">
                         <div id="spaceDiv2"></div>
                         {/*<div imageSrc="img/codebg.png"></div>*/}
