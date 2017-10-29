@@ -10,12 +10,10 @@ import dbapp from "../../Config/firebaseConfig";
 //import Editor from "./editor"; 
 //import {VertSplitter, HorizSplitter} from "../Splitter";
 import Editor from "../Editor";
-<<<<<<< HEAD
-import SQLEditor from "../SqlEditor";
-=======
 import CCSideNav from "../CCSideNav"
 import {SideNav, SideNavItem, Button, Icon} from 'react-materialize';
->>>>>>> 53f10efe23a2af0d3b313ba833d33414c1b02839
+import SQLEditor from "../SqlEditor";
+import LiveMode from "../LiveMode";
 
 const tree = {
     module: 'react-ui-tree',
@@ -146,6 +144,7 @@ class Terminal extends Component {
 
     query = () => {
         let command = this.refs.editor.getCode();
+        
 
         this.refs.SQLOutput.runQuery(command);
     }
@@ -192,8 +191,8 @@ class Terminal extends Component {
         });
     };
 
-    handlethischange = e => {
-        console.log("HANDLE!!!!!!!!! " + e.target.value);
+    getEditorCode = () => {
+       //return this.refs.editor.getCode();
     }
 
     render() {
@@ -268,7 +267,6 @@ class Terminal extends Component {
                                   <form id="preview-form">
                                     <textarea className="codemirror-textarea" name="editor-value" id="editor-value" rows="4" cols="10">&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;</textarea>
                                     <br/>
-
                                 </form> */}
                             </div>
                         </div>
@@ -284,9 +282,9 @@ class Terminal extends Component {
 
                         <div className="panel-bottom">
                             <Tabs className='command'>
-                                <Tab title="Output" id="output-tab"><SQLEditor ref="SQLOutput"/></Tab>
+                                <Tab title="Output" id="output-tab" active><SQLEditor ref="SQLOutput"/></Tab>
                                 <Tab title="Terminal" id="terminal-tab">Testing {/* <Editor ref="cmd" readOnly={false} id="cmd" height={this.state.editorHeight} lineNumbers={false}/> */}</Tab>
-                                <Tab title="Live Mode" id="live-tab"></Tab>
+                                <Tab title="Live Mode" id="live-tab"><LiveMode html={this.editorValue}/></Tab>
                             </Tabs>    
                         </div>
                     </div>

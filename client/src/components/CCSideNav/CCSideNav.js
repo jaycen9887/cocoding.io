@@ -7,7 +7,7 @@ const CCSideNav = () =>
              trigger={<div className="sideNav"><a href="#" data-activates="slide-out" className="button-collapse show-on-large"><i class="small material-icons center" id="icons">apps</i></a></div>}
              options={{ closeOnClick: false, edge: 'right' }}
     >
-            <h3 class="black-text center">Settings</h3>
+            <h3 className="black-text center">Settings</h3>
             <h5 className="black-text">Syntax</h5>
     <SideNavItem>
             <select className="browser-default grey darken-1">

@@ -6,9 +6,9 @@ import LandingPage from "./components/LandingPage";
 import Company from "./components/Company";
 import Classroom from "./components/Classroom";
 import Room from "./components/Room";
-//import Footer from "./components/Footer"
-import Terminal from "./components/Terminal"
-import CCSideNav from "./components/CCSideNav"
+//import Footer from "./components/Footer";
+import Terminal from "./components/Terminal";
+import CCSideNav from "./components/CCSideNav";
 
 const App = () =>
     <Router>

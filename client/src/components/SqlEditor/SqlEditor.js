@@ -44,6 +44,7 @@ class SQLEditor extends Component{
     //change jaycenm to users username
     
     componentWillMount = () =>{
+
         /* console.log("MOUNTED **************************************************");
         
 
@@ -72,7 +73,7 @@ class SQLEditor extends Component{
 
         console.log("USERDB: " + this.state.userDB);
 
-       // this.clearOutput();
+       this.clearOutput();
 
         const odb = firebase.database().ref().child(this.state.username + "/output");
 
@@ -690,7 +691,7 @@ class SQLEditor extends Component{
         
     }
     
-    clearOuput = () => {
+    clearOutput = () => {
         const dbref = this.state.username + "/output";
         const updates = {};
         updates[dbref] = '';
