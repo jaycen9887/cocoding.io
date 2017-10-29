@@ -14,7 +14,7 @@ import TestPage from "./components/TestPage"
 const App = () =>
     <Router>
         <div>
-            {/*<Nav />*/}
+            <Nav />
             <Switch>
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/companies" component={Company} />

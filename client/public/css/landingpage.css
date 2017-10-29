@@ -35,6 +35,10 @@ nav .brand-logo {
 
 }
 
+#sideNavInside {
+width: 50px;
+}
+
 /*.side-nav {*/
   /*color: white;*/
   /*width: 50px;*/
