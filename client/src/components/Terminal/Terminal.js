@@ -61,28 +61,34 @@ class Terminal extends Component {
     }
 
     toggleChat = () => {
-        let val;
+        //let val;
         
         if(this.chatVisible === "invisible"){
-            console.log("invisible");
-            this.chatVisible = "visible";
-            val = true;
-            //this.setState({chatIsVisible: state});
+            //console.log("invisible");
+            //this.chatVisible = "visible";
+            //val = true;
+            this.setState({chatIsVisible: "visible"});
+            console.log("Chat: " +this.state.chatIsVisible);
         } else {
-            console.log("visible");
-           this.chatVisible = "invisible";
-           val = false;
-           //this.setState({chatIsVisible: state});
+            //console.log("visible");
+           //this.chatVisible = "invisible";
+           //val = false;
+           this.setState({chatIsVisible: "invisible"});
+           console.log("Chat: " + this.state.chatIsVisible);
         }
     }
 
     toggleVideo = () => {
         if(this.videoVisible === "invisible"){
-            console.log("invisible");
-            this.videoVisible = "visible";
+            //console.log("invisible");
+            //this.videoVisible = "visible";
+            this.setState({videoIsVisible: "visible"});
+            console.log("Chat: " +this.state.videoIsVisible);
         } else {
-            console.log("visible");
-            this.videoVisible = "invisible";
+            //console.log("visible");
+            //this.videoVisible = "invisible";
+            this.setState({videoIsVisible: "invisible"});
+            console.log("Chat: " +this.state.videoIsVisible);
         }
     }
 
