@@ -35,7 +35,7 @@ app.use(express.static("client/build"));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Override with POST having ?_method=DELETE
-app.use(methodOverride("_method"));
+app.use(methodOverride("_method")); 
 
 // Set Handlebars.
 //var exphbs = require("express-handlebars");
