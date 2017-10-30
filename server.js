@@ -26,7 +26,7 @@ opentok.createSession(function(err, session) {
     //console.log(session.sessionId);
 });
 
-app.set('views', path.join(__dirname, "client"));
+//app.set('views', path.join(__dirname, "client"));
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(__dirname + "/public"));
@@ -37,10 +37,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 
 // Set Handlebars.
-var exphbs = require("express-handlebars");
+//var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+//app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+//app.set("view engine", "handlebars");
 
 //Socket setup
 io.on('connection', function(socket){
