@@ -26,6 +26,8 @@ opentok.createSession(function(err, session) {
     //console.log(session.sessionId);
 });
 
+app.set('views', path.join(__dirname, "client"));
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(__dirname + "/public"));
 
