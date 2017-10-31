@@ -2,7 +2,7 @@
   "name": "learn-io",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://localhost:3002/",
   "dependencies": {
     "codemirror-minified": "^5.28.0",
     "history": "^4.7.2",
@@ -18,11 +18,17 @@
     "react-dom": "^16.0.0",
     "react-materialize": "^1.0.16",
     "react-modal": "^3.1.0",
+    "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-link": "^2.0.2",
     "react-scripts": "1.0.14",
     "react-treebeard": "^2.0.3",
     "react-ui-tree": "^3.1.0"
+  },
+  "peerDependencies": {
+    "codemirror": "^5.31.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

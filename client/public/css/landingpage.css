@@ -351,7 +351,8 @@ footer.page-footer {
   height: 400px !important;
   min-height: 150px;
   background: #111111;
-  width:1165px;
+  width: 100%;
+  /* width:1165px; */
   margin: 0px;
   overflow: hidden;
 
