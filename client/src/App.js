@@ -6,10 +6,9 @@ import LandingPage from "./components/LandingPage";
 import Company from "./components/Company";
 import Classroom from "./components/Classroom";
 import Room from "./components/Room";
-//import Footer from "./components/Footer"
-import Terminal from "./components/Terminal"
-import CCSideNav from "./components/CCSideNav"
-import TestPage from "./components/TestPage"
+//import Footer from "./components/Footer";
+import Terminal from "./components/Terminal";
+import CCSideNav from "./components/CCSideNav";
 
 const App = () =>
     <Router>
@@ -23,7 +22,6 @@ const App = () =>
                 <Route exact path="/terminal/:id" component={Terminal} />
 
                 <Route exact path="/sidenavtest" component={CCSideNav} />
-                <Route exact path="/editortest" component={TestPage} />
             </Switch>
             {/*<Footer />*/}
         </div>

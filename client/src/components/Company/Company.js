@@ -1,10 +1,12 @@
 import React from "react";
-import Footer from "../Footer"
+import Footer from "../Footer";
+import Nav from "../Nav";
 
 import "./Company.css"
 
 const Company = () =>
 <div>
+    <Nav />
     <div id="index-banner" className="parallax-container">
         <div className="section no-pad-bot">
             <div id="companiesDiv1">

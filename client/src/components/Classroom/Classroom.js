@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 //import {Parallax} from 'react-materialize';
 import "./Classroom.css"
-import Footer from "../Footer"
+import Footer from "../Footer";
+import Nav from "../Nav";
 
 class Classroom extends Component {
     render() {
         return (
-<div>
-
+    <div>
+        <Nav />
         <div className="section no-pad-bot">
             <div id="signUpAndTagDiv">
 

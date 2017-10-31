@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import cx from 'classnames';
+
 import {Tabs, Tab, Col, Row, Input} from 'react-materialize';
-import Tree from 'react-ui-tree';
+import Tree from '../FileTree';
 import "./Terminal.css";
 import * as firebase from 'firebase';
 import "firebase/database";
@@ -11,102 +11,11 @@ import dbapp from "../../Config/firebaseConfig";
 //import {VertSplitter, HorizSplitter} from "../Splitter";
 import Editor from "../Editor";
 import SQLEditor from "../SqlEditor";
-import CCSideNav from "../CCSideNav"
+import CCSideNav from "../CCSideNav";
 import {SideNav, SideNavItem, Button, Icon} from 'react-materialize';
+import LiveMode from "../LiveMode";
 
-const tree = {
-    module: 'react-ui-tree',
-    children: [
-        {
-            module: 'dist',
-            collapsed: true,
-            children: [
-                {
-                    module: 'node.js',
-                    leaf: true
-                },
-                {
-                    module: 'react-ui-tree.css',
-                    leaf: true
-                },
-                {
-                    module: 'react-ui-tree.js',
-                    leaf: true
-                },
-                {
-                    module: 'tree.js',
-                    leaf: true
-                }
-            ]
-        },
-        {
-            module: 'example',
-            children: [
-                {
-                    module: 'app.js',
-                    leaf: true
-                },
-                {
-                    module: 'app.less',
-                    leaf: true
-                },
-                {
-                    module: 'index.html',
-                    leaf: true
-                }
-            ]
-        },
-        {
-            module: 'lib',
-            children: [
-                {
-                    module: 'node.js',
-                    leaf: true
-                },
-                {
-                    module: 'react-ui-tree.js',
-                    leaf: true
-                },
-                {
-                    module: 'react-ui-tree.less',
-                    leaf: true
-                },
-                {
-                    module: 'tree.js',
-                    leaf: true
-                }
-            ]
-        },
-        {
-            module: '.gitiignore',
-            leaf: true
-        },
-        {
-            module: 'index.js',
-            leaf: true
-        },
-        {
-            module: 'LICENSE',
-            leaf: true
-        },
-        {
-            module: 'Makefile',
-            leaf: true
-        },
-        {
-            module: 'package.json',
-            leaf: true
-        },
-        {
-            module: 'README.md',
-            leaf: true
-        },
-        {
-            module: 'webpack.config.js',
-            leaf: true
-        }
-    ]
-};
+
 
 class Terminal extends Component {
 
@@ -120,8 +29,9 @@ class Terminal extends Component {
 
         this.state = {
             active: null,
-            tree: tree,
+            //tree: tree,
             editorHeight: 400,
+            editorWidth: window.innerWidth,
             value: "",
             theme: "rubyblue",
             mode: "javascript",
@@ -143,6 +53,7 @@ class Terminal extends Component {
 
     query = () => {
         let command = this.refs.editor.getCode();
+        
 
         this.refs.SQLOutput.runQuery(command);
     }
@@ -152,45 +63,10 @@ class Terminal extends Component {
         this.editorValue = value;
         //console.log(this.editorValue);
       }
+    
 
-    handleChange = tree => {
-        this.setState({
-            tree: tree
-        });
-    };
-
-
-    renderNode = node => {
-        return (
-            <span
-                className={cx('node', {
-                    'is-active': node === this.state.active
-                })}
-                onClick={this.onClickNode.bind(null, node)}
-                onDoubleClick={this.onDoubleClickNode.bind(null, node)}
-            >
-        {node.module}
-      </span>
-        );
-    };
-
-    onDoubleClickNode = node => {
-        const { tree } = this.state;
-        var newName = prompt("Rename this file", node.module);
-        node.module = newName;
-        this.setState({
-            tree: tree
-        });
-    }
-
-    onClickNode = node => {
-        this.setState({
-            active: node
-        });
-    };
-
-    handlethischange = e => {
-        console.log("HANDLE!!!!!!!!! " + e.target.value);
+    getEditorCode = () => {
+       //return this.refs.editor.getCode();
     }
 
     render() {
@@ -198,13 +74,7 @@ class Terminal extends Component {
             <div className="panel-container">
 
                 <div className="panel-left">
-                    <Tree
-                        paddingLeft={20}
-                        tree={this.state.tree}
-                        onChange={this.handleChange}
-                        isNodeCollapsed={this.isNodeCollapsed}
-                        renderNode={this.renderNode}
-                    />
+                    <Tree />
                 </div>
                 {/* <VertSplitter /> */}
                  <div className="splitter">
@@ -257,7 +127,7 @@ class Terminal extends Component {
 
 
 
-                                <Editor ref="editor" onChange={() => this.handlethischange} roomsdb={this.currentLocation} height={this.state.editorHeight} readOnly={false} id='editor' lineNumbers={true}/>
+                                <Editor ref="editor" onChange={() => this.handlethischange} roomsdb={this.currentLocation} width={this.state.editorWidth} height={this.state.editorHeight} readOnly={false} id='editor' lineNumbers={true}/>
 
                                 {/* <Editor
                                     className="codemirror-textarea"
@@ -267,7 +137,6 @@ class Terminal extends Component {
                                   <form id="preview-form">
                                     <textarea className="codemirror-textarea" name="editor-value" id="editor-value" rows="4" cols="10">&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;</textarea>
                                     <br/>
-
                                 </form> */}
                             </div>
                         </div>
@@ -282,11 +151,17 @@ class Terminal extends Component {
                         </div>
 
                         <div className="panel-bottom">
-                            <Tabs className='command'>
-                                <Tab title="Output" id="output-tab"><SQLEditor ref="SQLOutput"/></Tab>
-                                <Tab title="Terminal" id="terminal-tab">Testing {/* <Editor ref="cmd" readOnly={false} id="cmd" height={this.state.editorHeight} lineNumbers={false}/> */}</Tab>
-                                <Tab title="Live Mode" id="live-tab"></Tab>
-                            </Tabs>    
+                            <div className='command'>
+                                <Tabs>
+                                    <Tab title="Output" id="output-tab" active><SQLEditor ref="SQLOutput"/></Tab>
+                                    <Tab title="Terminal" id="terminal-tab">Testing {/* <Editor ref="cmd" readOnly={false} id="cmd" height={this.state.editorHeight} lineNumbers={false}/> */}</Tab>
+                                    <Tab title="Live Mode" id="live-tab"><LiveMode html={this.editorValue}/></Tab>
+                                </Tabs>
+                            </div>
+                            <div className="splitter-vertical"/>
+                            <div>
+                                
+                            </div>    
                         </div>
                     </div>
                 </div>
