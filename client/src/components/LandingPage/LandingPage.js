@@ -285,9 +285,7 @@ class LandingPage extends Component {
                             <div className="row center">
                                 {/*add video here*/}
                                 <div class = "video-container" >
-                                    <iframe width = "540" height = "500"
-                                            src = "https://www.youtube.com/embed/Q8TXgCzxEnw?rel=0"
-                                            frameborder = "0" allowfullscreen ></iframe>
+                                    <iframe width="640" height="360" src="https://www.powtoon.com/embed/bca98ppU5Jp/" frameborder="0"></iframe>
                                 </div>
                                 <div className="row"></div>
                                 <div className="row"></div>
