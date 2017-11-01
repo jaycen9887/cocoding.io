@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Tree from 'react-ui-tree';
 import cx from 'classnames';
+import {Icon} from "react-materialize";
+import "./filetree.css";
 
 class FileTree extends Component{
     constructor(props){
@@ -140,13 +142,21 @@ class FileTree extends Component{
 
     render(){
         return(
-            <Tree
-                paddingLeft={20}
-                tree={this.state.tree}
-                onChange={this.handleChange}
-                isNodeCollapsed={this.isNodeCollapsed}
-                renderNode={this.renderNode}
-            />
+            <div>
+                <div>
+                    <span className="createFiles">
+                        <a><Icon>insert_drive_file</Icon></a>
+                        <a><Icon>create_new_folder</Icon></a>
+                    </span>
+                </div>
+                <Tree
+                    paddingLeft={20}
+                    tree={this.state.tree}
+                    onChange={this.handleChange}
+                    isNodeCollapsed={this.isNodeCollapsed}
+                    renderNode={this.renderNode}
+                />
+            </div>
         );
     }
 }

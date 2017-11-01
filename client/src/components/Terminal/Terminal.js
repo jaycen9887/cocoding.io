@@ -67,13 +67,13 @@ class Terminal extends Component {
             //console.log("invisible");
             //this.chatVisible = "visible";
             //val = true;
-            this.setState({chatIsVisible: "visible"});
+            //this.setState({chatIsVisible: "visible"});
             console.log("Chat: " +this.state.chatIsVisible);
         } else {
             //console.log("visible");
            //this.chatVisible = "invisible";
            //val = false;
-           this.setState({chatIsVisible: "invisible"});
+           //this.setState({chatIsVisible: "invisible"});
            console.log("Chat: " + this.state.chatIsVisible);
         }
     }
@@ -82,12 +82,12 @@ class Terminal extends Component {
         if(this.videoVisible === "invisible"){
             //console.log("invisible");
             //this.videoVisible = "visible";
-            this.setState({videoIsVisible: "visible"});
+            //this.setState({videoIsVisible: "visible"});
             console.log("Chat: " +this.state.videoIsVisible);
         } else {
             //console.log("visible");
             //this.videoVisible = "invisible";
-            this.setState({videoIsVisible: "invisible"});
+            //this.setState({videoIsVisible: "invisible"});
             console.log("Chat: " +this.state.videoIsVisible);
         }
     }
@@ -232,7 +232,7 @@ class Terminal extends Component {
                                 </div>
                                 <div>
                                     <Row> 
-                                        <Input s={12} type="select" label="Mode" onChange={this.getMode}> 
+                                        <Input s={6} type="select" label="Mode" onChange={this.getMode}> 
                                             <option value="APL">APL</option>
                                             <option value="ASN.1">ASN.1</option>
                                             <option value="Asterisk">Asterisk dialplan</option>
@@ -366,9 +366,8 @@ class Terminal extends Component {
                                             <option value="z80">Z80</option>
                                             <option value="zenburn">zenburn.css</option>
                                         </Input>
-                                    </Row>
-                                    <Row> 
-                                        <Input s={12} type="select" label="Theme" onChange={this.getTheme}> 
+ 
+                                        <Input s={6} type="select" label="Theme" onChange={this.getTheme}> 
                                             <option value="default">default</option>
                                             <option value="3024-day">3024-day</option>
                                             <option value="3024-night">3024-night</option>

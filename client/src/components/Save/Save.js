@@ -8,7 +8,14 @@ class Save extends Component{
 
     }
 
-    save = (filename, filetype, location) => {
+    save = () => {
+        let fileType = this.props.fileType;
+        let fileName = this.props.fileName;
+        let body = this.props.body;
+
+        let file = {};
+        file.body = body;
+        file.name = fileName + "." + fileType;
 
     }
 
@@ -18,12 +25,8 @@ class Save extends Component{
             header="Save"
             trigger={<a><Icon>Save</Icon></a>}>
                 <Row>
-                    <div>
-                        This is where the files will be listed
-                    </div>
                     <Input s={6} placeholder="File Name" label="File Name" />
                     <Input s={6} placeholder="File Type" label="File Type" />
-                    
                 </Row>
             </Modal>
         );
