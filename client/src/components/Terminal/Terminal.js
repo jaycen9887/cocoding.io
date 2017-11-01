@@ -14,6 +14,7 @@ import SQLEditor from "../SqlEditor";
 import CCSideNav from "../CCSideNav";
 import {SideNav, SideNavItem, Button, Icon, Slide, Slider} from 'react-materialize';
 import LiveMode from "../LiveMode";
+import Tokbox from "../Tokbox";
 
 
 
@@ -149,7 +150,7 @@ class Terminal extends Component {
 
                             <div id="terminalBody">
 
-                                {/*<CCSideNav />*/}
+                                <CCSideNav />
 
                                 {/*<nav className="sideNav blue-grey darken-4">*/}
                                     {/*<a href="" data-activates="slide-out" className="button-collapse show-on-large"><i class="small material-icons center" id="icons">apps</i></a>*/}
@@ -425,7 +426,7 @@ class Terminal extends Component {
                                         TEXT CHAT
                                     </div>
                                     <div className={`voice-chat ${this.videoVisible}`}>
-                                        VIDEO CHAT
+                                        <Tokbox opentokClientUrl="https://static.opentok.com/v2/js/opentok.min.js" />
                                     </div>
 
                                 </div>

@@ -315,6 +315,14 @@ class Editor extends React.Component {
         };
         return(
             <div>
+
+                {/*<div style={{ marginBottom: 10 }}>*/}
+                    {/*<button onClick={this.testChangeMode}>Toggle</button>*/}
+                {/*</div>*/}
+                {/*<CodeMirror ref="editor" roomsdb={this.props.room} value={this.state.code} onChange={this.updateCode} options={options} id={this.props.id}/>*/}
+
+
+
                 <CodeMirror ref="editor" roomsdb={this.props.room} value={this.state.code}
                             onChange={this.updateCode} options={options} autoFocus={true} />
             </div>
