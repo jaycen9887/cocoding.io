@@ -84,7 +84,7 @@ class FileTree extends Component{
                     'is-active': node === this.state.active
                 })}
                 onClick={this.onClickNode.bind(null, node)}
-                onDoubleClick={this.onDoubleClickNode.bind(null, node)}
+                
             >
         {node.module}
       </span>

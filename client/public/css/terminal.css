@@ -112,3 +112,11 @@ ul{
 .panel-bottom .row .col {
     padding: 0px !important;
 } 
+
+.sqlTree {
+    height: 50vh;
+}
+
+.fileTree {
+    height: 50vh; 
+}

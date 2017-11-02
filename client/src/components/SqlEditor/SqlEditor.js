@@ -24,6 +24,8 @@ class SQLEditor extends Component{
             commands: "",
             userDB: "",
             refTB: "",
+            tablesDB: "",
+            currentDB: "",
             tables: "",
             username: "jaycenm",
             tableExists: false,
@@ -52,26 +54,37 @@ class SQLEditor extends Component{
             
         }*/
 
-        if(this.state.username !== ""){
-            this.setState({
-                userDB: firebase.database().ref().child(this.state.username)
-            });
-            
-        }else {
-            this.setState({
-                username: "jaycenm",
-            });
+        this.userdb.on("value", snap => {
+            this.setState({currentDB: snap.val().currentDB});
+            console.log(snap.val().currentDB);
+            //console.log(firebase.database().ref().child(this.state.username + "/database/" + snap.val().currentDB));
+            if(this.state.username !== ""){
+                this.setState({
+                    userDB: firebase.database().ref().child(this.state.username),
+                    tablesDB: firebase.database().ref().child(this.state.username + "/database/" + snap.val().currentDB)
+                });
+                
+            } else {
+                this.setState({
+                    username: "jaycenm",
+                });
+    
+                this.setState({
+                    userDB: firebase.database().ref().child(this.state.username),
+                    tablesDB: firebase.database().ref().child(this.state.username + "/database/" + snap.val().currentDB)
+                });
+            }
 
-            this.setState({
-                userDB: firebase.database().ref().child(this.state.username)
-            });
-        }
+            console.log(this.state.tablesDB);
+        }); 
+
+        
 
         console.log("STATE USERNAME: " + this.state.username);
 
        
 
-        console.log("USERDB: " + this.state.userDB);
+       // console.log("USERDB: " + this.state.userDB);
 
        this.clearOutput();
 
@@ -134,8 +147,8 @@ class SQLEditor extends Component{
         
         let q = command.split(' ');
         let term = q[0].toUpperCase();
-        console.log(command);
-        console.log(q);
+        //console.log(command);
+        //console.log(q);
         switch(term){
             case "CREATE": 
                 switch(q[1].toUpperCase()){
@@ -145,7 +158,8 @@ class SQLEditor extends Component{
                         //check if table already exists
                         this.ifTableExists(table_name);
                         if(this.state.tableExists === true){
-                            console.log("Error: Table Already Exists.");
+                            //console.log("Error: Table Already Exists.");
+                            this.updateOutput("Error: Table " + table_name + " Already Exists");
                         }else {
                             let col = {
                                 Columns: {}
@@ -174,7 +188,7 @@ class SQLEditor extends Component{
                                 i++;
                             }
                             
-                            this.createTable(this.state.refTB, table_name, col);
+                            this.createTable(this.state.tablesDB, table_name, col);
                         }
     
                         //CREATE TABLE table_name (column_1 datatype, column_2 datatype, column_3 datatype);
@@ -263,16 +277,22 @@ class SQLEditor extends Component{
             case "INSERT":
                 let table_name = q[2];
             
-                let selection = this.state.tables.child(table_name);
+                let selection = this.state.tablesDB.child(table_name);
                 let columns = selection.child("Columns");
                 let count = 0;
-                columns.once('value', function(snapshot){
+                columns.once('value', snapshot =>{
                     //console.log(snapshot.val());
-                    snapshot.forEach(function(child){
+                    snapshot.forEach(child =>{
                         count++;
                     }); 
                 });
                 console.log("COUNT: ", count);
+
+                for(var i = 3; i < q.length; i++){
+                    console.log(q[i]);
+                }
+
+                this.updateOutput("Insertion Complete...");
                 
                 //code
                 break;
@@ -285,7 +305,8 @@ class SQLEditor extends Component{
 
     ifTableExists = (table_name) =>{
         //console.log("THE TABLE NAME: " + table_name);
-        this.state.tables.once('value', function(snapshot) {
+        console.log(this.state.tablesDB);
+        this.state.tablesDB.once('value', snapshot => {
             if(snapshot.hasChild(table_name)){
                 
                 this.updateOutput("Table '" + table_name + "' already exists.\n");
@@ -297,7 +318,8 @@ class SQLEditor extends Component{
     }
     
     ifDatabaseExists = (database_name) =>{
-        this.state.userDB.once('value', function(snapshot){
+        let db = firebase.database().ref().child(this.state.username + "/database/");
+        db.once('value', snapshot =>{
             if(snapshot.hasChild(database_name)){
                 this.setState({databaseExists: true});
                 this.updateOutput("Database '" + database_name + "' already exists.\n");
@@ -306,24 +328,24 @@ class SQLEditor extends Component{
     }
 
     createTable = (database_name, table_name, columns) => {
-        console.log("Database: " + database_name + "\nTable: " + table_name + "\nColumns: " + columns);
+        //console.log("Database: " + database_name + "\nTable: " + table_name + "\nColumns: " + columns);
         //console.log(columns);
-        let nTB = database_name.child("Tables");
+        let nTB = database_name.child("/Tables");
         if(database_name === "" || database_name === undefined) {
             this.updateOutput("Command invalid.\n");
-            console.log("invalid command");
+            //console.log("invalid command");
     
         } else {
-            console.log("valid command");
+            //console.log("valid command");
             let updates;
     
             //console.log(tables);
-            nTB.once("value", function(snapshot) {
+            nTB.once("value", snapshot => {
                 updates = snapshot.val();
-                console.log(snapshot.val());
-                console.log(updates);
+                //console.log(snapshot.val());
+                //console.log(updates);
                 updates[table_name] = {"Columns": columns.Columns};
-                console.log(updates);
+               // console.log(updates);
          
                 database_name.update({Tables: updates}); 
         
@@ -337,10 +359,12 @@ class SQLEditor extends Component{
     }
     
     createDB = (database_name) => {
-        console.log(" CREATING DATABASE: " + database_name);
+        //console.log(" CREATING DATABASE: " + database_name);
         let current;
         let updates = {};
-        this.state.userDB.once('value', function(snapshot){
+        let db = firebase.database().ref().child(this.state.username + "/database/");
+        //let userDB = firebase.database().ref().child(this.state.username);
+        db.once('value', snapshot => {
             current = snapshot.val();
             if(current !== ""){
                 updates = current;
@@ -351,21 +375,22 @@ class SQLEditor extends Component{
                     id: 0
                 }
             };
-            this.state.userDB.update(updates);
+            db.update(updates);
         });
         
         this.updateOutput("Database '" + database_name + "' successfully created.\n");        
     }
 
      useDB = (database_name) => {
-        console.log("USE: " + this.state.userDB);
-         this.state.userDB.once('value', snapshot => {
+        //console.log("USE: " + this.state.userDB);
+        let db = firebase.database().ref().child(this.state.username + "/database/");
+         db.once('value', snapshot => {
              if(snapshot.hasChild(database_name)){
-                 this.setState( { refTB: this.state.userDB.child(database_name)});
+                 this.setState( { refTB: db.child(database_name)});
                  //console.log('...Using ' + database_name);
                  let updates = {};
                  updates["currentDB"] = database_name;
-                 this.state.userDB.update(updates);
+                 db.update(updates);
                  this.updateOutput("...Using " + database_name + "\n");
                  //$("#output").append("<p style='color:green;'><i class='fa fa-check-circle-o fa-lg' aria-hidden='true'></i> ...Using " + database_name + "</p>");
                  //console.log(refTB);
@@ -389,12 +414,12 @@ class SQLEditor extends Component{
          
          for(let i = 0; i < table_name.length; i++){
      
-             let selection = this.statetables.child(table_name[i]);
+             let selection = this.state.tables.child(table_name[i]);
              let columns = selection.child("Columns");
              //console.log("Selection: ", selection);
      
-             columns.once('value', function(snapshot){
-                 snapshot.forEach(function(child){
+             columns.once('value', snapshot => {
+                 snapshot.forEach( child => {
                      //console.log("CHILD: ", child.key);
                      if(child.key === constraints[0]){
                          //console.log(child.key);
@@ -538,12 +563,12 @@ class SQLEditor extends Component{
         let columns = selection.child("Columns");
         let tableOutput = [];
     
-        columns.orderByChild('id').once('value', function(snapshot){
+        columns.orderByChild('id').once('value', snapshot =>{
             //console.log("*************************\n" + snapshot.key + "\n****************************");
         });
-        columns.once('value', function(snapshot){
+        columns.once('value', snapshot => {
             //console.log(snapshot.val());
-            snapshot.forEach(function(child){
+            snapshot.forEach(child =>{
                 tableOutput.push(child.key, child.val());
             }); 
     
@@ -664,8 +689,10 @@ class SQLEditor extends Component{
     updateOutput = (update) => {
         let currentOutput = "";
         let tbRef = firebase.database().ref().child(this.state.username + '/output');
-        let usersDB = firebase.database().ref().child(this.state.username + "/");
+        let usersDB = firebase.database().ref().child(this.state.username);
         const updates = {};
+
+        console.log("updating.....");
     
         tbRef.once("value", snap =>{
             /* console.log(snap.val()); */

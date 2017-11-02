@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import {Tabs, Tab, Col, Row, Input} from 'react-materialize';
 import Tree from '../FileTree';
+import SqlTree from "../SqlTree";
 import "./Terminal.css";
 import * as firebase from 'firebase';
 import "firebase/database";
@@ -145,7 +146,8 @@ class Terminal extends Component {
             <div className="panel-container">
 
                 <div className="panel-left">
-                    <Tree username="jaycenm" fileTreeChanged={this.handleFileTreeChanged.bind(this)}/>
+                    <div className="fileTree"><Tree username="jaycenm" fileTreeChanged={this.handleFileTreeChanged.bind(this)}/></div>
+                    <div className="sqlTree"><SqlTree username="jaycenm"/></div>
                 </div>
                 {/* <VertSplitter /> */}
                  <div className="splitter">
@@ -224,7 +226,7 @@ class Terminal extends Component {
                             <div className='command'>
                                 <Tabs>
                                     <Tab title="Output" id="output-tab" active><SQLEditor ref="SQLOutput"/></Tab>
-                                    <Tab title="Terminal" id="terminal-tab">Testing {/* <Editor ref="cmd" readOnly={false} id="cmd" height={this.state.editorHeight} lineNumbers={false}/> */}</Tab>
+                                    <Tab title="Terminal" id="terminal-tab">V3 {/* <Editor ref="cmd" readOnly={false} id="cmd" height={this.state.editorHeight} lineNumbers={false}/> */}</Tab>
                                     <Tab title="Live Mode" id="live-tab"><LiveMode html={this.editorValue}/></Tab>
                                 </Tabs>
                             </div>
