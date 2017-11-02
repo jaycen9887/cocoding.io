@@ -150,7 +150,7 @@ class Terminal extends Component {
 
                             <div id="terminalBody">
 
-                                <CCSideNav />
+                                {/* <CCSideNav /> */}
 
                                 {/*<nav className="sideNav blue-grey darken-4">*/}
                                     {/*<a href="" data-activates="slide-out" className="button-collapse show-on-large"><i class="small material-icons center" id="icons">apps</i></a>*/}

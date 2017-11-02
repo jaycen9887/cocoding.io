@@ -21,7 +21,7 @@ const App = () =>
                 <Route exact path="/room" component={Room} />
                 <Route exact path="/terminal/:id" component={Terminal} />
 
-                <Route exact path="/sidenavtest" component={CCSideNav} />
+                {/* <Route exact path="/sidenavtest" component={CCSideNav} /> */}
             </Switch>
             {/*<Footer />*/}
         </div>
