@@ -155,8 +155,8 @@ class FileTree extends Component{
             <div>
                 <div>
                     <span className="createFiles">
-                        <a><Icon onClick={this.addFile}>insert_drive_file</Icon></a>
-                        <a><Icon onClick={this.addFolder}>create_new_folder</Icon></a>
+                        <a onClick={this.addFile}><Icon>insert_drive_file</Icon></a>
+                        <a onClick={this.addFolder}><Icon>create_new_folder</Icon></a>
                     </span>
                 </div>
                 <Tree
