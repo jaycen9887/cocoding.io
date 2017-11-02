@@ -153,3 +153,7 @@ Tabs {
     border: 4px solid;
 }
 
+.OTPublisherContainer {
+    display: none;
+}
+
