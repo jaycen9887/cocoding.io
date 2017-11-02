@@ -40,6 +40,7 @@ class Terminal extends Component {
             chatIsVisible: false,
             videoIsVisible: false,
             run: "this.query",
+            username: "jaycenm"
         };
 
         this.editorValue = "";
@@ -132,12 +133,19 @@ class Terminal extends Component {
        //return this.refs.editor.getCode();
     }
 
+    handleFileTreeChanged = (name) => {
+        console.log("changed");
+        if(name !== "Presentation"){
+          this.refs.editor.changeFile(name);
+        }
+    }
+
     render() {
         return (
             <div className="panel-container">
 
                 <div className="panel-left">
-                    <Tree />
+                    <Tree username="jaycenm" fileTreeChanged={this.handleFileTreeChanged.bind(this)}/>
                 </div>
                 {/* <VertSplitter /> */}
                  <div className="splitter">
@@ -190,7 +198,7 @@ class Terminal extends Component {
 
 
 
-                                <Editor ref="editor" onChange={() => this.handlethischange} roomsdb={this.currentLocation} width={this.state.editorWidth} height={this.state.editorHeight} readOnly={false} id='editor' lineNumbers={true}/>
+                                <Editor ref="editor" username={this.state.username} onChange={() => this.handlethischange} roomsdb={this.currentLocation} width={this.state.editorWidth} height={this.state.editorHeight} readOnly={false} id='editor' lineNumbers={true}/>
 
                                 {/* <Editor
                                     className="codemirror-textarea"

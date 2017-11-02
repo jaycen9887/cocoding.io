@@ -193,7 +193,8 @@ class Editor extends React.Component {
             code: "",
             editor: "",
             theme: "rubyblue",
-            mode: "javascript"
+            mode: "javascript",
+            username: this.props.username
         }
     }
 
@@ -296,11 +297,17 @@ class Editor extends React.Component {
         return this.state.code;
     }
 
-    testChangeMode = () => {
-        console.log("testCodeUpdate");
-        this.setState({
-            mode: "markdown",
-            code: "TEST TEST TEST"
+    changeFile = (file) => {
+        file = file.split(".");
+        //console.log(file[0]);
+        const userDb = firebase.database().ref().child(this.state.username);
+        const uploads = userDb.child("uploads");
+        //console.log(userDb);
+        //console.log(uploads);
+        uploads.on("value", snap => {
+            let val = snap.val()[file[0]].content;
+                this.updateCode(val);
+        
         });
     }
 

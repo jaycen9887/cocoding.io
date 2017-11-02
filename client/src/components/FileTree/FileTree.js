@@ -3,113 +3,79 @@ import Tree from 'react-ui-tree';
 import cx from 'classnames';
 import {Icon} from "react-materialize";
 import "./filetree.css";
+import * as firebase from "firebase";
+import "firebase/database";
+import "../../Config/firebaseConfig";
 
 class FileTree extends Component{
     constructor(props){
         super(props);
-
+        this.tree = {
+            module: 'Presentation',
+            children: []
+        };
         this.state = {
-            tree: {
-                module: 'react-ui-tree',
-                children: [
-                    {
-                        module: 'dist',
-                        collapsed: true,
-                        children: [
-                            {
-                                module: 'node.js',
-                                leaf: true
-                            },
-                            {
-                                module: 'react-ui-tree.css',
-                                leaf: true
-                            },
-                            {
-                                module: 'react-ui-tree.js',
-                                leaf: true
-                            },
-                            {
-                                module: 'tree.js',
-                                leaf: true
-                            }
-                        ]
-                    },
-                    {
-                        module: 'example',
-                        children: [
-                            {
-                                module: 'app.js',
-                                leaf: true
-                            },
-                            {
-                                module: 'app.less',
-                                leaf: true
-                            },
-                            {
-                                module: 'index.html',
-                                leaf: true
-                            }
-                        ]
-                    },
-                    {
-                        module: 'lib',
-                        children: [
-                            {
-                                module: 'node.js',
-                                leaf: true
-                            },
-                            {
-                                module: 'react-ui-tree.js',
-                                leaf: true
-                            },
-                            {
-                                module: 'react-ui-tree.less',
-                                leaf: true
-                            },
-                            {
-                                module: 'tree.js',
-                                leaf: true
-                            }
-                        ]
-                    },
-                    {
-                        module: '.gitiignore',
-                        leaf: true
-                    },
-                    {
-                        module: 'index.js',
-                        leaf: true
-                    },
-                    {
-                        module: 'LICENSE',
-                        leaf: true
-                    },
-                    {
-                        module: 'Makefile',
-                        leaf: true
-                    },
-                    {
-                        module: 'package.json',
-                        leaf: true
-                    },
-                    {
-                        module: 'README.md',
-                        leaf: true
-                    },
-                    {
-                        module: 'webpack.config.js',
-                        leaf: true
-                    }
-                ]
+            username: this.props.username,
+            active: null,
+            tree: this.tree,
+        }
+
+    }
+
+    componentDidMount(){
+        
+        const userDb = firebase.database().ref().child(this.state.username);
+        const uploads = userDb.child("uploads");
+
+        uploads.on('value', snap => {
+
+            this.tree["children"] = [];
+            var value = snap.val();
+           // console.log(value);
+            for(var file in value){
+                this.tree.children.push(this.checkFolder(value[file], file));
+            }
+           // console.log(this.tree);
+        });
+    }
+    checkFolder = (itemChecking, name) => {
+       
+        var obj = {};
+        //var obj = {};
+        
+        //console.log(itemChecking);
+        
+        if(itemChecking.type === "file"){
+            obj["module"] = name + "." + itemChecking.fileType;
+            obj["leaf"] = true;
+        }else if(itemChecking.type === "folder"){
+            obj["module"] = name;
+            obj["collapsed"] = false;
+            obj["children"] = [];
+
+            //console.log(itemChecking);
+            //console.log(Object.values(itemChecking));
+
+           for(const child of Object.keys(itemChecking)){
+              // console.log(child);
+               //console.log(itemChecking[child]);
+                if(typeof itemChecking[child] === 'object'){
+                  obj["children"].push(this.checkFolder(itemChecking[child], child));
+                }
             }
         }
+
+
+        //this.tree["children"].push(obj);
+
+        return obj;
     }
 
     handleChange = tree => {
         this.setState({
             tree: tree
         });
-    };
+    }
 
     renderNode = node => {
         return (
@@ -138,15 +104,59 @@ class FileTree extends Component{
         this.setState({
             active: node
         });
+        
+        this.props.fileTreeChanged(node.module);
     };
+
+    addFolder = () => {
+        const userDb = firebase.database().ref().child(this.state.username);
+        const uploads = userDb.child("uploads");
+        //update database
+        var obj = {};
+        var folder = prompt("Name Folder");
+        if(folder !== null){
+            obj["module"] = folder;
+            obj["collapsed"] = false;
+            obj["children"] = [];
+            this.tree["children"].push(obj);
+
+            var updates = {};
+            updates[folder + "/type"] = "folder";
+            uploads.update(updates);
+
+            this.setState({tree: this.tree});
+        //update tree
+        }
+    }
+
+    addFile = () => {
+        const userDb = firebase.database().ref().child(this.state.username);
+        const uploads = userDb.child("uploads");
+
+        var obj = {};
+        var file = prompt("Name File");
+        if(file !== null) {
+            obj["module"] = file;
+            obj["leaf"] = true;
+            this.tree["children"].push(obj);
+
+            var updates = {};
+            updates[file + "/fileType"] = "js";
+            updates[file + "/type"] = file;
+            updates[file + "/content"] = "    "; 
+
+            this.setState({tree: this.tree});
+        }
+    }
+    
 
     render(){
         return(
             <div>
                 <div>
                     <span className="createFiles">
-                        <a><Icon>insert_drive_file</Icon></a>
-                        <a><Icon>create_new_folder</Icon></a>
+                        <a><Icon onClick={this.addFile}>insert_drive_file</Icon></a>
+                        <a><Icon onClick={this.addFolder}>create_new_folder</Icon></a>
                     </span>
                 </div>
                 <Tree
@@ -155,6 +165,7 @@ class FileTree extends Component{
                     onChange={this.handleChange}
                     isNodeCollapsed={this.isNodeCollapsed}
                     renderNode={this.renderNode}
+                    className="tree"
                 />
             </div>
         );

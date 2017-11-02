@@ -23,7 +23,7 @@ nav .brand-logo {
   width: 75px;
 }
 
-/* .sideNav  {
+.sideNav  {
   color: white;
   width: 50px;
   position: absolute;
@@ -33,7 +33,7 @@ nav .brand-logo {
   height: 100vh;
   background-color: #233339;
 
-} */
+}
 
 #sideNavInside {
 width: 50px;
