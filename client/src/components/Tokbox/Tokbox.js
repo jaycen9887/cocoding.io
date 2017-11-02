@@ -23,6 +23,7 @@ class Tokbox extends React.Component {
     render() {
         return (
             <div>
+
                 <OTPublisher session={this.sessionHelper.session} />
 
                 {this.state.streams.map(stream => {
