@@ -144,6 +144,7 @@ class FileTree extends Component{
             updates[file + "/fileType"] = "js";
             updates[file + "/type"] = file;
             updates[file + "/content"] = "    "; 
+            uploads.update(updates);
 
             this.setState({tree: this.tree});
         }
