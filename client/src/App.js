@@ -9,6 +9,7 @@ import Room from "./components/Room";
 //import Footer from "./components/Footer";
 import Terminal from "./components/Terminal";
 import Tokbox from "./components/Tokbox";
+import Chat from "./components/Chat";
 
 const App = () =>
     <Router>
@@ -20,7 +21,9 @@ const App = () =>
                 <Route exact path="/classrooms" component={Classroom} />
                 <Route exact path="/room" component={Room} />
                 <Route exact path="/terminal/:id" component={Terminal} />
-                {/* <Route exact path="/tokboxtest" component={Tokbox} /> */}
+
+                {/* <Route exact path="/tokboxtest" component={Tokbox} />
+                <Route exact path="/chattest" component={Chat} /> */}
             </Switch>
             {/*<Footer />*/}
         </div>

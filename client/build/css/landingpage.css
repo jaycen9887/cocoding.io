@@ -1,0 +1,361 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+#navPosition {
+  padding-left: 20px;
+}
+nav ul a,
+nav .brand-logo {
+  color: white;
+}
+
+#robotsSize {
+  height: 80px;
+  width: 80px;
+}
+
+#robotsSize2 {
+  height: 65px;
+  width: 75px;
+}
+
+.sideNav  {
+  color: white;
+  width: 50px;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  bottom: 0;
+  height: 100vh;
+  background-color: #233339;
+
+}
+
+#sideNavInside {
+width: 50px;
+}
+
+/*.side-nav {*/
+  /*color: white;*/
+  /*width: 50px;*/
+  /*position: absolute;*/
+  /*top: 60px;*/
+  /*right: 0px;*/
+  /*bottom: 0;*/
+  /*height: 600px;*/
+/*}*/
+
+#tagLine {
+  font-size: 65px;
+  line-height: 115%;
+  font-family: 'Fjalla One', sans-serif;
+}
+#tagLine2 {
+  font-size:25px;
+  /*font-family: 'Varela Round', sans-serif;*/
+  color: aquamarine;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+
+}
+
+#signUpAndTagDiv {
+  padding-left: 30px;
+}
+
+#image1 {
+  height: 256px;
+  width: 256px;
+}
+
+#howWorksTitle {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Fjalla One', sans-serif;
+  color: black;
+  text-shadow: 2px 5px 1px grey;
+}
+
+#coolFeatureDiv {
+  background-image: repeating-linear-gradient(223deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 1px, transparent 0px, transparent 2px);
+  background-size: 80px;
+}
+
+#coolFeatureText {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 60px;
+  color: deepskyblue;
+  text-align: center;
+  text-shadow: 2px 5px 1px #3083FF;
+}
+
+p {
+  line-height: 2rem;
+
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 700px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.langBox {
+  color: white;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+h5 {
+  color: black;
+}
+
+#head1 {
+  font-size: 60px;
+  line-height: 90%;
+  font-family: 'Saira Extra Condensed', sans-serif;
+
+}
+
+#head2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+#head3 {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+#robotBg {
+  opacity: .2;
+}
+#div3Info {
+  height: 150px;
+}
+
+#imageSize {
+  height: 300px;
+  width: 300px;
+
+}
+
+#imageSize2 {
+  height: 300px;
+  width: 300px;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+#empowerText {
+  color: #212122;
+  font-size: 35px;
+  margin-top: 130px;
+  margin-left: 15px;
+  color: black;
+}
+
+#empowerTextSub {
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+#roomDiv {
+  background-color: white;
+  height: 400px;
+}
+
+#spaceDiv {
+  height: 300px;
+}
+
+#spaceDiv2 {
+  height: 200px;
+}
+
+#texture{
+  background-color: #f0f0f0;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23b8b8b8' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/*#terminalBg {*/
+/*background-color: lightgrey;*/
+/*height: 1000px;*/
+/*}*/
+
+.modal {
+  width: 38% !important ;
+  max-height: 105% !important;
+}
+
+#preview-form {
+  /*flex: 0 0 auto;*/
+  /*min-height: 200px;*/
+  /*min-width: 1000px;*/
+  /*height:400px;*/
+  /*width: 1390px;*/
+}
+
+/*#editor-value {*/
+/*height: 1000px;*/
+/*}*/
+
+.CodeMirror {
+  height: auto;
+  overflow: hidden;
+  /*flex: 0 0 auto;*/
+  /*!*min-height: 200px;*!*/
+  /*min-width: 1000px;*/
+  /*height:400px;*/
+  width: 1165px;
+}
+.CodeMirror-scroll {
+  height: auto;
+}
+/*.CodeMirror-gutters {*/
+/*min-height: 400px;*/
+/*}*/
+
+/*#terminalBody {*/
+/*flex: 0 0 auto;*/
+/*min-height: 200px;*/
+/*min-width: 1000px;*/
+/*height:400px;*/
+/*width: 1390px;*/
+/*}*/
+
+.panel-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid silver;
+  overflow: hidden;
+  height: 100vh;
+
+  /* avoid browser level touch actions */
+  xtouch-action: none;
+}
+
+.panel-left {
+  flex: 0 0 auto;
+  /* only manually resize */
+  padding: 10px;
+  width: 200px;
+  min-height: 200px;
+  min-width: 100px;
+  white-space: nowrap;
+  background: #111111;
+  color: white;
+}
+
+.splitter {
+  flex: 0 0 auto;
+  width: 18px;
+  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
+  min-height: 500px;
+  cursor: col-resize;
+}
+
+.splitter-vertical {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 100%;
+  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/vsizegrip.png) center center no-repeat #535353;
+  min-height: 500px;
+  cursor: col-resize; 
+  float: left;
+}
+
+.panel-right {
+  flex: 1 1 auto;
+  /* resizable */
+  /*padding: 10px;*/
+  /*width: 100%;*/
+  /*min-height: 200px;*/
+  /*min-width: 200px;*/
+  /*background: #eee;*/
+  height: 100vw;
+}
+
+.panel-container-vertical {
+  display: flex;
+  flex-direction: column;
+  /*!*height: 500px;*!*/
+  /*border: 1px solid silver;*/
+  overflow: hidden;
+  background-color: black;
+  height: 100vh;
+}
+
+.panel-top {
+  flex: 0 0 auto;
+  /* only manually resize */
+  /*padding: 10px;*/
+  height: 400px;
+  min-height: 100px;
+  /*width: 100%;*/
+  /*white-space: nowrap;*/
+  /*background: #838383;*/
+  /*color: white;*/
+  overflow: hidden;
+}
+
+.splitter-horizontal {
+  flex: 0 0 auto;
+  height: 18px;
+  background: url(https://raw.githubusercontent.com/RickStrahl/jquery-resizable/master/assets/hsizegrip.png) center center no-repeat #535353;
+  cursor: row-resize;
+}
+
+.panel-bottom {
+  flex: 1 1 auto;
+  /* resizable */
+  padding: 0px;
+  height: 400px !important;
+  min-height: 150px;
+  background: #111111;
+  width: 100%;
+  /* width:1165px; */
+  margin: 0px;
+  overflow: hidden;
+
+
+}
+
