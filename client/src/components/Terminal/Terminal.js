@@ -117,6 +117,8 @@ class Terminal extends Component {
         
 
         this.refs.SQLOutput.runQuery(command);
+
+        this.refs.liveMode.setCode(command);
     }
 
     addPerson = () => {
@@ -227,7 +229,7 @@ class Terminal extends Component {
                                 <Tabs>
                                     <Tab title="Output" id="output-tab" active><SQLEditor ref="SQLOutput"/></Tab>
                                     <Tab title="Terminal" id="terminal-tab">V3 {/* <Editor ref="cmd" readOnly={false} id="cmd" height={this.state.editorHeight} lineNumbers={false}/> */}</Tab>
-                                    <Tab title="Live Mode" id="live-tab"><LiveMode html={this.editorValue}/></Tab>
+                                    <Tab title="Live Mode" id="live-tab"><LiveMode ref="liveMode"/></Tab>
                                 </Tabs>
                             </div>
                             <div className="splitter-vertical"></div>

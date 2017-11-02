@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 
 class LiveMode extends Component{
 
+    setCode = (html) => {
+        return {
+            __html: html
+        };
+    };
+
     render(){
         return(
-            <div dangerouslySetInnerHTML={{__html: this.props.html}}>
+            <div dangerouslySetInnerHTML={this.setCode()}>
 
             </div>
         );
