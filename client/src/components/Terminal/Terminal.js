@@ -118,7 +118,8 @@ class Terminal extends Component {
 
         this.refs.SQLOutput.runQuery(command);
 
-        this.refs.liveMode.setCode(command);
+        let c = this.refs.editor.returnCode();
+        this.refs.liveMode.setCode(c);
     }
 
     addPerson = () => {

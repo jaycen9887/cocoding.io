@@ -120,3 +120,12 @@ ul{
 .fileTree {
     height: 50vh; 
 }
+
+.liveModeDiv button{
+    color: black;
+    
+}
+
+.controllerNav label{
+    text-align: left;
+}

@@ -291,6 +291,10 @@ class Editor extends React.Component {
         //this.render();
     }
 
+    returnCode = () => {
+        return this.state.code;
+    }
+
     getCode = () => {
         console.log(this.state.code);
 
